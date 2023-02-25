@@ -45,8 +45,8 @@
 <section class="bg-yellow flex justify-between py-20 px-10">
   <div class="w-1/2">
     <div class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <img src="/img/logonav.svg" class="h-20 w-20 animate-bounce">
-      <h1 class="ml-1 title-font sm:text-4xl text-3xl mb-4 font-bold  uppercase border-t-3 animate-bounce"><span class="font-extrabold">d</span> <span class="text-bluey">u</span> <span>k</span> <span class="text-bluey">i</span> <span> d</span> s</h1><br>
+      <img src="/img/logonav.svg" class="h-20 w-20 animate-bounce md:text-4xl sm:text-2xl">
+      <h1 class="ml-1 title-font md:text-4xl sm:text-2xl mb-4 font-bold  uppercase border-t-3 animate-bounce"><span class="font-extrabold">d</span> <span class="text-bluey">u</span> <span>k</span> <span class="text-bluey">i</span> <span> d</span> s</h1><br>
     </div>
     <p class="leading-relaxed mb-3 text-xl">k e y s  t h o  k e g  f a j e l e homejeyyri kk hollly more ehdjhejk</p>
   </div>
