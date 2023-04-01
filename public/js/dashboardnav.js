@@ -30,3 +30,23 @@ const dropdownProfile= profile.querySelector('.profile-link');
 imgProfile.addEventListener('click',function(){
    dropdownProfile.classList.toggle('show');
 })
+
+window.addEventListener('click', function(e){
+   if(e.target !== imgProfile){
+      if(e.target !== dropdownProfile){
+         if(dropdownProfile.classList.contains('show')){
+            dropdownProfile.classList.remove('show');
+         }
+      }
+   }
+})
+
+
+
+//SIDEBAR COLLAPSE
+const  toggleS = document.querySelector('nav .toggle-sidebar');
+const sidebar = document.getElementById('#content');
+
+toggleS.addEventListener('click',function(){
+   sidebar.classList.toggle('hide');
+})

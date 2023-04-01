@@ -4,7 +4,7 @@
    
     <form method="POST" action="{{ route('login') }}">
         @csrf
-      <div class="flex justify-between"><span class="underline text-sm text-black dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-100 dark:focus:ring-offset-gray-800">Need an account?</span><br><p class="underline  text-black"><a href="{{ route('register') }}"> sign in</a><p></div>
+    <div class="flex justify-between"><span class="underline text-sm text-black dark:text-gray-400 hover:text-gray-600 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-100 dark:focus:ring-offset-gray-800">Need an account?</span><br><p class="underline  text-black"><a href="{{ route('register') }}"> sign in</a><p></div>
      <div class="">
          <!--image-->
          <div class="">

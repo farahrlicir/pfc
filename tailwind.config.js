@@ -23,8 +23,10 @@ module.exports = {
        'orange':'#F94A29',
        'yellow':'#FCE22A',
        'bluey':'#30E3DF'
-      }
-      
+      },
+    fontFamily: {
+      delicious:['Delicious Handrawn ,cursive']
+    }
     },
   },
   plugins: [],

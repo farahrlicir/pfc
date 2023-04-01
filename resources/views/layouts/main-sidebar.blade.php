@@ -15,16 +15,16 @@
    <!--SIDEBAR-->
    <section id="sidebar">
     <a href="#" class="brand"> 
-       <span><img src="/img/logonav.svg" class="w-9 h-9"></span>
+       <span><img src="/img/logo-black.png" class="w-9 h-9"></span>
        <span class="text-black">D</span><span class="text-bluey">U</span><span class="text-black">k</span> <span class="text-bluey">I</span> <span class="text-black">D</span><span class="text-black">S</span>
     </a>
     <ul class="side-menu">
-        <li><a href="#" class="active"><i class="bx bxs-home icon">Dashboard</i></a></li>
+        <li><a href="{{route('dashboard')}}"" class="active"><i class="bx bxs-home icon">Dashboard</i></a></li>
         <li class="divider">Main</li>
         <li>
-            <a href="#"><i class="bx bxs-inbox icon"></i>element<i class="bx bxs-chevron-right icon-right"></i></a>
+            <a href="#"><i class="bx bxs-inbox icon"></i>Student<i class="bx bxs-chevron-right icon-right"></i></a>
             <ul class="side-dropdown">
-               <li><a href="#">Alert</a></li>
+               <li><a href="{{route('student.create')}}">Add Student</a></li>
                <li><a href="#">Alert</a></li>
                <li><a href="#">Alert</a></li>
                <li><a href="#">Alert</a></li>
@@ -39,9 +39,9 @@
          <li class="divider"><a href="#">Tables and forms</a></li>
          <li><a href="#"><i class="bx bxs-home icon">Dashboard</i></a></li>
          <li>
-         <a href="#"><i class="bx bxs-inbox icon"></i>element<i class="bx bxs-chevron-right icon-right"></i></a>
+         <a href="#"><i class="bx bxs-inbox icon"></i>Teacher<i class="bx bxs-chevron-right icon-right"></i></a>
            <ul class="side-dropdown">
-             <li><a href="#">Alert</a></li>
+             <li><a href="#">Add Teacher</a></li>
              <li><a href="#">Alert</a></li>
              <li><a href="#">Alert</a></li>
              <li><a href="#">Alert</a></li>

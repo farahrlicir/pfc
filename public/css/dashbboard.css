@@ -7,19 +7,19 @@
 :root{
 }
 body{
-    background:beige;
+    background:rgb(243 244 246);
 }
 
 /*SIDEBAR*/
 #sidebar{
     position:fixed;
     width:200px;
-    background:white;
+    background:#E6E6FA;
     top:0;
     left:0;
     height:100%;
     overflow-y:auto;  
-    scrollbar-width:none;  
+    scrollbar-width:none; 
 }
 #sidebar::-webkit-scrollbar{
     display:none;
@@ -31,6 +31,10 @@ body{
  align-items:center;
  height:64px;
  font-weight:700;
+ top:0;
+ left:0;
+ z-index:100;
+
 }
 #sidebar .icon{
     minwidth:48px;
@@ -68,7 +72,7 @@ body{
     font-size:12px;
     text-transform:uppercase;
     font-weight:700;
-    color:pink;
+    color:gray;
 }
 #sidebar .side-dropdown{
     padding-left:46px;
@@ -94,12 +98,15 @@ max-height:1000px;
     left:200px;
 }
 nav{
-    background:pink;
+    background:white;
     height:64px;
     padding:0 20px;
     display:flex;
     align-items:center;
     grid-gap:28px;
+    position:sticky;
+    top:0;
+    left:0;
 }
 nav .toggle-sidebar{
     font-size:20px;
@@ -111,11 +118,31 @@ nav .nav-link{
 nav .nav-link .icon{
     font-size:20px;
 }
+nav .nav-link .badge{
+    position:absolute;
+    top:-12px;
+    right:-12px;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    border:2px solid black;
+    background:purple;
+    display:flex;
+    justify-content:center;
+    align-item:center;
+    color:black;
+    font-size:12px;
+}
 nav .divider{
     width:1px;
     background:black;
-    height:50px;
+    height:20px;
     display:block;
+}
+nav form{
+    max-width:400px;
+    width:100%;
+    margin-right:auto;
 }
 nav .profile{
     position:relative;
@@ -154,5 +181,28 @@ nav .profile .profile-link a{
 nav .profile .profile-link a:hover{
     background:beige;
 }
-
 /*ENDCONTENT*/
+
+
+
+/*MAIN*/
+main{
+   width:100%;
+   padding:24px 20px 20px 20px;
+  
+}
+main .title{
+     font-size:28px;
+     font-weight:600;
+     margin-bottom:10px;
+}
+main .list{
+    display:flex;
+    grid-gap:6px;
+}
+main .list li,
+main .list li a{
+}
+main img{
+    width:290px;
+}

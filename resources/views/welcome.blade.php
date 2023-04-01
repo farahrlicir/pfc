@@ -11,7 +11,7 @@
 <body>
   <header id="container" class="bg-yellow text-black">
 
-    <!--navbar-->
+    <!--NAVBAR-->
     <div class="container mx-auto items-center flex justify-between pb-3">
         <div>
           <img class="w-20 h-20"src="/img/logonav.svg">
@@ -37,7 +37,7 @@
                     <a class="block p-3 font-semibold " href="#">contact</a>
                 </li>
                 <li>
-                  <a class="block p-3 font-semibold " href="#">contact</a>
+                  <a class="block p-3 font-semibold " href="empty">goback</a>
               </li>
             </ul>
         </nav>
@@ -46,7 +46,7 @@
 
 
 
-           <!--Home-Page -->
+           <!--HOME-PAGE-->
  <section class="bg-yellow flex justify-between py-20 px-10" id="home">
   <div class="w-1/2">
     <div class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
@@ -292,6 +292,7 @@
 
         <!--FOOTER-->
   <footer class="p-4 bg-orange sm:p-6 ">
+
     <div class="sm:flex sm:items-center sm:justify-between">
         <span class="text-sm text-black sm:text-center ">© 2023 <a href="#">Edukids™</a>. All Rights Reserved.
         </span>
@@ -310,7 +311,9 @@
             </a>
         </div>
      </div>
-    </footer>
-  <script src="js/navi.js"></script>
+   
+  </footer>
+  
+   <script src="js/navi.js"></script>
 </body>
 </html>

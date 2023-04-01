@@ -1,0 +1,104 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\School;
+use Illuminate\Http\Request;
+
+class SchoolController extends Controller
+{
+    public function index()
+    {
+        $schools = School::orderBy('id','desc')->paginate(5);
+        return view('schools.index', compact('schools'));
+    }
+
+    /**
+    * Show the form for creating a new resource.
+    *
+    * @return \Illuminate\Http\Response
+    */
+    public function create()
+    {
+        return view('schools.create');
+    }
+
+    /**
+    * Store a newly created resource in storage.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @return \Illuminate\Http\Response
+    */
+    public function store(Request $request)
+    {
+        $request->validate([
+            'school-name' => 'required',
+            'school-adresse' => 'required',
+            'phone-num' => 'required',
+            'fax-num',
+            'web-site',
+            'email'
+        ]);
+        
+        School::create($request->post());
+
+        return redirect()->route('schools.index')->with('success','school has been created successfully.');
+    }
+
+    /**
+    * Display the specified resource.
+    *
+    * @param  \App\school  $school
+    * @return \Illuminate\Http\Response
+    */
+    public function show(School $school)
+    {
+        return view('schools.show',compact('school'));
+    }
+
+    /**
+    * Show the form for editing the specified resource.
+    *
+    * @param  \App\School  $school
+    * @return \Illuminate\Http\Response
+    */
+    public function edit(School $school)
+    {
+        return view('schools.edit',compact('school'));
+    }
+
+    /**
+    * Update the specified resource in storage.
+    *
+    * @param  \Illuminate\Http\Request  $request
+    * @param  \App\school $school
+    * @return \Illuminate\Http\Response
+    */
+    public function update(Request $request, School $school)
+    {
+        $request->validate([
+            'school-name' => 'required',
+            'school-adresse' => 'required',
+            'phone-num' => 'required',
+            'fax-num',
+            'web-site',
+            'email'
+        ]);
+        
+        $school->fill($request->post())->save();
+
+        return redirect()->route('schools.index')->with('success','school Has Been updated successfully');
+    }
+
+    /**
+    * Remove the specified resource from storage.
+    *
+    * @param  \App\Schoool $school
+    * @return \Illuminate\Http\Response
+    */
+    public function destroy(School $school)
+    {
+        $school->delete();
+        return redirect()->route('schools.index')->with('success','school has been deleted successfully');
+    }
+}
