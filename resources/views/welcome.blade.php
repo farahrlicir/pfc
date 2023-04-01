@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link href="img/favicon.png" rel="icon">
+  <title>Edukids</title>
   @vite('resources/css/app.css')
 </head>
 <body>
@@ -244,6 +245,50 @@
       </div>
     </section>
    </section>
+
+   <!--SUPP SECTION-->
+    <div>
+      <section class="text-black body-font" id="about">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/3">
+              <div class="h-45 border-4  border-yellow border-opacity-60 rounded-lg overflow-hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  class="w-10 h-10 object-cover object-center text-black">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                </svg>
+                <div class="p-6">
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Special Education</h1>
+                  <p class="leading-relaxed mb-3">Our Special Education Program offers quality education to children with disabilities and developmental delays.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="h-45 border-4 border-bluey border-opacity-60 rounded-lg overflow-hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  class="w-10 h-10 object-cover object-center text-black" >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+                </svg>
+                <div class="p-6">
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Full Day Session</h1>
+                  <p class="leading-relaxed mb-3">At Edukids, we offer full-day preschool sessions built on a play-based approach for kids ages two to five.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class=" h-45 border-4 border-pinky border-opacity-60 rounded-lg overflow-hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"  class="w-10 h-10 object-cover object-center text-black">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div class="p-6">
+                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Qualified Teachers</h1>
+                  <p class="leading-relaxed mb-3">Our team consists of experienced and creative teachers who are dedicated to your kid's successful education.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+    </div>
 
         <!--FOOTER-->
   <footer class="p-4 bg-orange sm:p-6 ">

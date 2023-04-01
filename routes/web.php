@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StudentController;
+ 
+
 
  
 
@@ -17,8 +20,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+  return view('auth.login');
+});
+Route::get('/welcome', function () {
   return view('welcome');
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -30,6 +37,13 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/student', [StudentController::class, 'create'])->name('student.create');
+  Route::get('/studentcreate', function () {
+    return view('student.create');
+  });
+
+
 
 
 

@@ -1,0 +1,158 @@
+*{
+    font-family:'Open Sans', sans-serif;
+    marging:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+}
+body{
+    background:beige;
+}
+
+/*SIDEBAR*/
+#sidebar{
+    position:fixed;
+    width:200px;
+    background:white;
+    top:0;
+    left:0;
+    height:100%;
+    overflow-y:auto;  
+    scrollbar-width:none;  
+}
+#sidebar::-webkit-scrollbar{
+    display:none;
+}
+#sidebar .brand{
+ font-size:24px;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ height:64px;
+ font-weight:700;
+}
+#sidebar .icon{
+    minwidth:48px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#sidebar .icon-right{
+    margin-left:auto;
+}
+#sidebar .side-menu{
+    margin:36px 0;
+    padding:0 20px;
+}
+#sidebar .side-menu a{
+ display:flex;
+ align-items:center;
+ font-size:14px;
+ color:black;
+ padding:12px 16px 12px 0;
+ transition:all .15s ease;
+ border-radius:20px;
+ margin:4px 0;
+}
+#sidebar .side-menu a:hover{
+    background:white;
+}
+#sidebar .side-menu > li > a .active,
+#sidebar .side-menu > li > a.active:hover{
+ background:black;
+ color:white;
+}
+#sidebar .divider{
+    margin-top:24px;
+    font-size:12px;
+    text-transform:uppercase;
+    font-weight:700;
+    color:pink;
+}
+#sidebar .side-dropdown{
+    padding-left:46px;
+    max-height:0;
+    overflow-y:hidden;
+    transition:all ,3s ease;
+}
+#sidebar .side-dropdown.show{
+max-height:1000px;
+}
+#sidebar .side-dropdown a:hover{
+    color:grey;
+}
+/*ENDSIDEBAR*/
+
+
+
+
+/*CONTENT*/
+#content{
+    position:relative;
+    width:calc(100% - 200px);
+    left:200px;
+}
+nav{
+    background:pink;
+    height:64px;
+    padding:0 20px;
+    display:flex;
+    align-items:center;
+    grid-gap:28px;
+}
+nav .toggle-sidebar{
+    font-size:20px;
+}
+nav .nav-link{
+    position:relative;
+}
+
+nav .nav-link .icon{
+    font-size:20px;
+}
+nav .divider{
+    width:1px;
+    background:black;
+    height:50px;
+    display:block;
+}
+nav .profile{
+    position:relative;
+}
+.profile img{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    object-fit:cover;
+}
+nav .profile .profile-link {
+    position:absolute;
+    top:calc(100% + 10px);
+    right:0;
+    padding:10px 0;
+    box-shadow:4px 4px 16px rgba(0,0,0, .1);
+    border-radius:10px;
+    width:150px;
+    opacity:0;
+    pointer-events:none;
+    transition:all .3s ease;
+}
+nav .profile .profile-link.show{
+    opacity:1;
+    pointer-events:visible;
+    top:100%;
+}
+nav .profile .profile-link a{
+    padding:10px 16px;
+    display:flex;
+    grid-gap:10px;
+    font-size:14px;
+    align-items:center;
+    transition:all .3s ease;
+}
+nav .profile .profile-link a:hover{
+    background:beige;
+}
+
+/*ENDCONTENT*/
