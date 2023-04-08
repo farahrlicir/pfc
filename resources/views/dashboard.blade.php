@@ -6,6 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <!-- BOXICONS -->
    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+   <!--dashboard-style-->
    <link rel="stylesheet" href="css/dashbboard.css">
    <link href="img/favicon.png" rel="icon">
    <script src="https://kit.fontawesome.com/034dfe95c2.js" crossorigin="anonymous"></script>
@@ -21,21 +22,21 @@
        <span class="text-black">D</span><span class="text-bluey">U</span><span class="text-black">k</span> <span class="text-bluey">I</span> <span class="text-black">D</span><span class="text-black">S</span>
     </a>
     <ul class="side-menu">
-        <li><a href="{{route('dashboard')}}" class="active"><i class="bx bxs-home icon">Dashboard</i></a></li>
+        <li><a href="{{route('dashboard')}}" class="active"><img src="img/home-sidebar.svg" alt="" class="icon"> Dashboard</a></li>
         <li class="divider">---Main---</li>
         <li>
-            <a href="#"><i class="bx bxs-inbox icon"></i>Students<i class="bx bxs-chevron-right icon-right"></i></a>
+            <a href="#"><img src="img/student-sidebar.svg" alt="" class="icon">Students<i class="bx bxs-chevron-right icon-right"></i></a>
             <ul class="side-dropdown">
-               <li><a href="{{route('student.create')}}">Add Student</a></li>
+               <li><a href="#">Add Student</a></li>
                <li><a href="#">Alert</a></li>
                <li><a href="#">Alert</a></li>
                <li><a href="#">Alert</a></li>
              </ul>
          </li>
          <li>
-           <a href="#"><i class="bx bxs-user-detail icon"></i>Users<i class="bx bxs-chevron-right icon-right"></i></a>
+           <a href="#"><img src="img/user-sidebar.svg" alt="" class="icon">Users<i class="bx bxs-chevron-right icon-right"></i></a>
            <ul class="side-dropdown">
-             <li><a href="">Add User</a></li>
+             <li><a href="{{route('register')}}">Add User</a></li>
              <li><a href="#">Update User</a></li>
              <li><a href="#">Delete User</a></li>
              <li><a href="#">User's List</a></li>
@@ -44,17 +45,16 @@
          <!--STAFF-->
          <li class="divider">---Staff's List---</li>           
          <li>
-          <a href="#"><i class="bx bxs-user-detail icon"></i>Director<i class="bx bxs-chevron-right icon-right"></i></a>
+          <a href="#"><img src="img/director-sidebar.svg" alt="" class="icon">Director<i class="bx bxs-chevron-right icon-right"></i></a>
           <ul class="side-dropdown">
-            <li><a href="">Add Director</a></li>
+            <li><a href="{{route('directors.create')}}">Add Director</a></li>
             <li><a href="#">Update Director</a></li>
-            <li><a href="#">Delete Director</a></li>
-            <li><a href="#">Director's List</a></li>
+            <li><a href="{{route('directors.index')}}">Director's List</a></li>
           </ul>
         </li>
 
         <li>
-          <a href="#"><i class="bx bxs-user-detail icon"></i>Teachers<i class="bx bxs-chevron-right icon-right"></i></a>
+          <a href="#"><img src="img/teacher-sidebar.svg" alt="" class="icon"> Teachers<i class="bx bxs-chevron-right icon-right"></i></a>
           <ul class="side-dropdown">
             <li><a href="">Add Teacher</a></li>
             <li><a href="#">Update Teacher</a></li>
@@ -64,40 +64,30 @@
         </li>
 
         <li>
-          <a href="#"><i class="bx bxs-user-detail icon"></i>Psychologists<i class="bx bxs-chevron-right icon-right"></i></a>
+          <a href="#"><img src="img/psychologist-sidebar.svg" alt="" class="icon"> Psychologists<i class="bx bxs-chevron-right icon-right"></i></a>
           <ul class="side-dropdown">
-            <li><a href="">Add Psychologist</a></li>
+            <li><a href="{{route('psychologists.create')}}">Add Psychologist</a></li>
             <li><a href="#">Update Psychologist</a></li>
             <li><a href="#">Delete Psychologist</a></li>
-            <li><a href="#">Psychologist's List</a></li>
+            <li><a href="{{route('psychologists.index')}}">Psychologist's List</a></li>
           </ul>
         </li>
        
          <li class="divider">--School components--</li>
-         <li><a href="#"><i class="bx bxs-home icon">Classrooms</i></a></li>
-         <li><a href="#"></i>Library</a></li>
-         <li><a href="#"><i class="bx bxs-widget icon"></i>Dormitories</a></li>
+         <li><a href="{{route('classrooms.create')}}"><img src="img/classroom-sidebar.svg" alt="" class="icon"> Classrooms</a></li>
+         <li><a href="#"><img src="img/library-sidebar.svg" alt="" class="icon"> Library</a></li>
+         <li><a href="#"><img src="img/dormitory-sidebar.svg" alt="" class="icon"> Dormitories</a></li>
          <li>
          
         <li class="divider">_____________________</li>
         <li>
-         <a href="#"><i class="fa-duotone fa-gear"></i>Setting<i class="bx bxs-chevron-right icon-right"></i></a>
+         <a href="#"><img src="img/setting-sidebar.svg" alt="" class="icon"> Setting<i class="bx bxs-chevron-right icon-right"></i></a>
           <ul class="side-dropdown">
-           <li><a href="{{route('companies.create')}}">Add info</a></li>
-           <li><a href="#">Update info</a></li>
-           <li><a href="#">Delete info</a></li>
-           <li><a href="#">List info</a></li>
+           <li><a href="{{route('schools.create')}} ">Add info</a></li>
+           <li><a href="{{route('schools.index')}}">School's info</a></li>
           </ul>
         </li>
-        <li>
-          <a href="#"><i class="fa-regular fa-gear"></i>Setting<i class="bx bxs-chevron-right icon-right"></i><a>
-           <ul class="side-dropdown">
-            <li><a href="{{route('companies.create')}}">Add info</a></li>
-            <li><a href="#">Update info</a></li>
-            <li><a href="#">Delete info</a></li>
-            <li><a href="#">List info</a></li>
-           </ul>
-         </li>
+        <!--<li><a href="#" class="active">Dashboard</a></li>-->
      </ul>
   </section>
  <!--ENDSIDEBAR-->
@@ -107,7 +97,7 @@
    <section id="content">
       <!--NAVBAR-->
       <nav>
-          <i class='bx bx-menu toggle-sidebar cursor-pointer'></i>
+          <!--<p class="flex md:text-base sm:text-xs ">Primary School Edukids</p>-->
            <form action="#">
               <div class="form-group">
               </div>
@@ -122,7 +112,7 @@
           </a>
           <span class="divider"></span>
           <div class="profile">
-            <img src="/img/admin2.jpg">
+            <img src="/img/admin2.jpg" class="">
             <ul class="profile-link">
               <li><a href="{{route('profile.edit')}}"><i class="bx bxs-user-circle  icon"></i>Profile</a></li>
               <form method="POST" action="{{ route('logout') }}">
@@ -142,13 +132,23 @@
       <main>
          <h1 class="text-2xl ">Dashboard</h1><br>
          <div class="border-white border-2 h-auto w-auto bg-purple-200">
-           <div class="lg:flex lg:align-middle lg:justify-between sm:grid-cols-1">
-            <div class="grid-cols-1 py-9 px-7">
-            <h1 class=" md:font-extrabold md:text-2xl sm:font-bold sm:text-sm "><span class=""> Good morning,</span><span class="">{{ Auth::user()->name }}</span></h1>
-            <p class="text-bold">Ready to start yours day hjgjhgjhgjhghjhuik</p>
+             <div class="lg:flex lg:align-middle lg:justify-between sm:grid-cols-1">
+                 <div class="grid-cols-1 py-9 px-7">
+                    <h1 class=" md:font-extrabold md:text-2xl sm:font-bold sm:text-sm "><span class=""> Hi,</span><span class="">{{      Auth::user()->name }}</span></h1>
+                    <p class="text-bold">Ready to start your working day let's go</p>
+                 </div>
+                 <img src="/img/hii.svg" >
+              </div>
+
+              <!--CLOCK-->
+              <div class="bg-purple-400 w-fit mb-10 md:ml-7 border-red-300 border-x-4">
+                <div id="clock" class="clock  font-bold text-2xl "></div>
+                <div class="bottom flex">
+                <div id="day" class="day font-semibold"></div>
+                <div id="dayOfWeek" class="dayOfWeek font-semibold"></div>
+             </div>
+             <!--ENDCLOCK-->
             </div>
-            <img src="/img/hii.svg">
-           </div>
          </div>
          <br><br><br><br><br>
 
@@ -173,14 +173,6 @@
                    <p>Total Course</p>
                    <svg width="64px" height="64px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--emojione" preserveAspectRatio="xMidYMid meet" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M54.9 39.7l7.3 7.6l-32.1 16.1s-4.2 2.1-6.2-1.2c-8-13 31-22.5 31-22.5" fill="#360d49"> </path> <path d="M29.2 53.9s-6.1 2.3-5 6.6c1.2 4.5 6.1 1.8 6.1 1.8l30.5-15s-1.7-4.8 1.4-8l-33 14.6" fill="#d9e3e8"> </path> <path fill="#be98d2" d="M34.4 8.9L63.6 39L29.1 53.3L7 16.7z"> </path> <g fill="#94989b"> <path d="M60.7 42.6l-20.4 8.8l20-9.7z"> </path> <path d="M60.4 45.2l-21.7 9.5L60 44.3z"> </path> <path d="M60.6 46.7L32.9 59.4l27.3-13.6z"> </path> </g> <path d="M23.8 62.1c-3.4-7.5 5.3-8.8 5.3-8.8L7 16.7s-5-.1-5 5.4c0 2.3 1 4 1 4l20.8 36" fill="#1a1919"> </path> <path d="M8.7 32.2l-7.3 7.6l32.1 16.1s4.2 2.1 6.2-1.2c8-13-31-22.5-31-22.5" fill="#090e01"> </path> <path d="M34.3 46.4s6.1 2.3 5 6.6c-1.2 4.5-6 1.8-6 1.8l-30.5-15s1.7-4.8-1.4-8l32.9 14.6" fill="#d9e3e8"> </path> <path fill="#ffe294" d="M29.2 1.4L0 31.5l34.5 14.3L56.6 9.2z"> </path> <g fill="#94989b"> <path d="M3.2 34.2l20 9.7l-20.4-8.8z"> </path> <path d="M3.6 36.8l21.2 10.4l-21.7-9.5z"> </path> <path d="M3.4 38.3l27.2 13.6L2.9 39.2z"> </path> </g> <path d="M39.8 54.6c3.4-7.5-5.3-8.8-5.3-8.8L56.6 9.2s5-.1 5 5.4c0 2.3-1 4-1 4l-20.8 36" fill="#eee1b4"> </path> <path d="M56.7 26l6.1 6.4l-27.1 13.5s-3.6 1.7-5.3-1C23.8 34 56.7 26 56.7 26z" fill="#f9f0f0"> </path> <path d="M35 38s-5.2 1.9-4.2 5.6c1 3.8 5.1 1.5 5.1 1.5l25.7-12.7s-1.4-4 1.2-6.7L35 38z" fill="#d9e3e8"> </path> <path fill="#63099f" d="M39.4 0L64 25.4L34.9 37.5L16.2 6.6z"> </path> <path fill="#e2bbbb" d="M40.1 5.8l4.8 5.3l-17.7 6.7L23 11z"> </path> <g fill="#94989b"> <path d="M61.6 28.5l-17.2 7.3l16.8-8.2z"> </path> <path d="M61.4 30.7L43 38.6l18-8.8z"> </path> <path d="M61.6 31.9L38.2 42.6L61.1 31z"> </path> </g> <path d="M30.5 44.9c-2.8-6.3 4.5-7.4 4.5-7.4L16.2 6.6s-4.3-.1-4.3 4.5c0 1.9.8 3.4.8 3.4l17.8 30.4" fill="#eee7e7"> </path> </g></svg>
              </div>
-             <div class="bg-amber-100 border-white border-2 py-6">
-              <h2 class="font-bold">17</h2>
-              <p>Total Course</p>
-              <svg></svg>
-             </div>
-             
-  
-
          </section>
       </main>
      <!--ENDMAIN--> 
@@ -221,6 +213,8 @@
 
  
 <script src="js/dashboardnav.js"></script>
+<script src="js/clock.js"></script>
+
  </body>
 </html>
  

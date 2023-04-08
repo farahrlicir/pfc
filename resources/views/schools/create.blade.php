@@ -1,91 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('master')
 
-<head>
-    <meta charset="UTF-8">
-    <title>Add Company Form - Laravel 9 CRUD</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
 
-<body>
-    <div class="container mt-2">
-        <div class="row">
-            <div class="col-lg-12 margin-tb">
-                <div class="pull-left mb-2">
-                    <h2>Add Company</h2>
-                </div>
-                <div class="pull-right">
-                    <a class="btn btn-primary" href="{{ route('schools.index') }}"> Back</a>
-                </div>
-            </div>
+@section('title')
+School-create
+@stop
+
+@section('main')
+ 
+<div class="bg-white">
+  <div>
+    <h2 class="text-center font-extrabold bg-purple-200">***Add   School's Info***</h2>
+    <br><br><br><br>
+  </div>
+
+
+<form action="{{ route('schools.store') }}" method="POST">
+    @csrf
+    <div class=" px-2 grid gap-6 mb-6 md:grid-cols-2">
+        <div>
+            <label for="schoolname" class="block mb-2 text-sm font-medium text-black">School's Name :</label>
+            <input type="text" name="schoolname" id="schoolname" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5 dark:bg-gray-700" placeholder="type it ..."   value="{{old('schoolname')}}">
+            @error('schoolname')
+            <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+            @enderror
         </div>
-        @if(session('status'))
-        <div class="alert alert-success mb-1 mt-1">
-            {{ session('status') }}
+        <div>
+            <label for="schooladresse" class="block mb-2 text-sm font-medium text-black "> Address:</label>
+            <input type="text" name="schooladresse" id="schooladresse" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ..." value="{{old('schooladresse')}}">
         </div>
-        @endif
-        <form action="{{ route('schools.store') }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Name:</strong>
-                        <input type="text" name="school-name" class="form-control" placeholder="Company Name">
-                        @error('school-name')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-                
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Company Address:</strong>
-                        <input type="text" name="school-adresse" class="form-control" placeholder="Company Address">
-                        @error('school-adresse')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Company Email:</strong>
-                        <input type="text" name="phone-num" class="form-control" placeholder="Company Email">
-                        @error('phone-num')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Company Email:</strong>
-                        <input type="text" name="fax-num" class="form-control" placeholder="Company Email">
-                        @error('fax-num')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Company Email:</strong>
-                        <input type="text" name="web-site" class="form-control" placeholder="Company Email">
-                        @error('web-site')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                        <strong>Company Email:</strong>
-                        <input type="email" name="email" class="form-control" placeholder="Company Email">
-                        @error('email')
-                        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                        @enderror
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary ml-3">Submit</button>
-            </div>
-        </form>
-    </div>
-</body>
-
-</html>
+        @error('schooladresse')
+        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+        @enderror
+        <div>
+            <label for="phonenum" class="block mb-2 text-sm font-medium text-black ">Phone Number :</label>
+            <input type="tel" name="phonenum" id="phonenum" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ... " value="{{old('phonenum')}}">
+        </div>
+        @error('phonenum')
+        <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+        @enderror
+          <div>
+            <label for="faxnum" class="block mb-2 text-sm font-medium text-black ">Fax-Num :</label>
+            <input type="text" name="faxnum" id="faxnum" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ..." value="{{old('faxnum')}}">
+          </div>
+          @error('faxnum')
+          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+          @enderror
+          <div>
+            <label for="website" class="block mb-2 text-sm font-medium text-black ">Web-Site :</label>
+            <input type="text" name="website" id="website" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ..." value="{{old('website')}}">
+          </div>
+          @error('website')
+          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+          @enderror
+          <div>
+            <label for="email" class="block mb-2 text-sm font-medium text-black ">Email :</label>
+            <input type="email" name="email" id="email" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ..." value="{{old('email')}}">
+          </div>
+          @error('email')
+          <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+          @enderror
+        </div>
+    <br><br>
+    <div class="flex space-x-4">
+      <button type="submit" class=" p-3 text-white bg-gray-900 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto  py-2.5 text-center">Save</button><br>
+      <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><a href="{{ route('schools.index') }}"> Back</a><button>
+     </div>
+   
+ </form>
+</div>
+@stop

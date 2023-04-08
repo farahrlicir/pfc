@@ -64,8 +64,8 @@ body{
 }
 #sidebar .side-menu > li > a .active,
 #sidebar .side-menu > li > a.active:hover{
- background:black;
- color:white;
+ background:rgba(192 , 132 ,252);
+ color:black;
 }
 #sidebar .divider{
     margin-top:24px;
@@ -96,6 +96,8 @@ max-height:1000px;
     position:relative;
     width:calc(100% - 200px);
     left:200px;
+    overflow-x:auto;
+    
 }
 nav{
     background:white;
@@ -126,7 +128,7 @@ nav .nav-link .badge{
     height:20px;
     border-radius:50%;
     border:2px solid black;
-    background:purple;
+    background:white;
     display:flex;
     justify-content:center;
     align-item:center;
@@ -152,6 +154,7 @@ nav .profile{
     height:36px;
     border-radius:50%;
     object-fit:cover;
+    cursor:pointer;
 }
 nav .profile .profile-link {
     position:absolute;

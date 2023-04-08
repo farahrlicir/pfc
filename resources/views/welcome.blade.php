@@ -37,7 +37,7 @@
                     <a class="block p-3 font-semibold " href="#">contact</a>
                 </li>
                 <li>
-                  <a class="block p-3 font-semibold " href="empty">goback</a>
+                  <a class="block p-3 font-semibold " href="#">goback</a>
               </li>
             </ul>
         </nav>

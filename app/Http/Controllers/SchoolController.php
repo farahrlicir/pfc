@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\School;
 use Illuminate\Http\Request;
+use App\Models\School;
 
 class SchoolController extends Controller
 {
     public function index()
     {
-        $schools = School::orderBy('id','desc')->paginate(5);
+        $schools = School::orderBy('id','asc')->paginate(30);
         return view('schools.index', compact('schools'));
     }
 
@@ -32,11 +32,11 @@ class SchoolController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'school-name' => 'required',
-            'school-adresse' => 'required',
-            'phone-num' => 'required',
-            'fax-num',
-            'web-site',
+            'schoolname' => 'required',
+            'schooladresse' => 'required',
+            'phonenum' => 'required',
+            'faxnum',
+            'website',
             'email'
         ]);
         
@@ -77,11 +77,11 @@ class SchoolController extends Controller
     public function update(Request $request, School $school)
     {
         $request->validate([
-            'school-name' => 'required',
-            'school-adresse' => 'required',
-            'phone-num' => 'required',
-            'fax-num',
-            'web-site',
+            'schoolname' => 'required',
+            'schooladresse' => 'required',
+            'phonenum' => 'required',
+            'faxnum',
+            'website',
             'email'
         ]);
         

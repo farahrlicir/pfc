@@ -9,7 +9,7 @@
     @vite('resources/css/app.css','resources/js/app.js',)
 </head>
 <body>
-    <footer class="w-full  bottom-0 bg-white sm:p-6 ">
+    <footer class="w-full  relative bottom-0 bg-white sm:p-6 ">
 
         <div class="sm:flex sm:items-center sm:justify-between">
             <span class="text-sm text-black sm:text-center ">© 2023 <a href="#">Edukids™</a>. All Rights Reserved.

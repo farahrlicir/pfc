@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StudentController;
-use App\Http\Controllers\PostController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\SchoolController;
+use App\Http\Controllers\PsychologistController;
+use App\Http\Controllers\DirectorController;
+use App\Http\Controllers\ClassroomController;
+use App\Http\Controllers\LibraryController;
+
 
 
 
@@ -45,51 +48,30 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::resource('schools', SchoolController::class);
+Route::resource('schools', SchoolController::class)->middleware('auth');
 
 
- Route::middleware('auth')->group(function () {
-  Route::get('/student-create', [StudentController::class, 'create'])->name('student.create');
-  Route::post('/student-create', [StudentController::class, 'store'])->name('student.create');
-
- });
 
  
 
- Route::middleware('auth')->group(function () {
-  Route::get('/setting-create', [SettingController::class, 'create'])->name('setting.create');
-  Route::post('/setting-create', [SettingController::class, 'store'])->name('setting.create');
- });
-
- //post
 
 
- Route::get('posts', [PostController::class, 'index'])
-    ->name('posts')
-    ->middleware('auth');
-Route::get('posts/create', [PostController::class, 'create'])
-    ->name('posts.create')
-    ->middleware('auth');
-Route::post('posts', [PostController::class, 'store'])
-    ->name('posts.store')
-    ->middleware('auth');
-Route::get('posts/{post}/edit', [PostController::class, 'edit'])
-    ->name('posts.edit')
-    ->middleware('auth');
-Route::put('posts/{post}', [PostController::class, 'update'])
-    ->name('posts.update')
-    ->middleware('auth');
-Route::delete('posts/{post}', [PostController::class, 'destroy'])
-    ->name('posts.destroy')
-    ->middleware('auth');
+ Route::resource('psychologists', PsychologistController::class)->middleware('auth');
 
 
 
-require __DIR__.'/auth.php';
-Route::resource('companies', CompanyController::class);
-
-
-Route::fallback(function(){
-  return view('');
+Route::get('/master',function(){
+  return view('master');
 });
 
+Route::get('/new',function(){
+  return view('new');
+});
+
+Route::resource('directors', DirectorController::class)->middleware('auth');
+Route::resource('classrooms', ClassroomController::class)->middleware('auth');
+
+Route::resource('libraries', LibraryController::class)->middleware('auth');
+
+require __DIR__.'/auth.php';
+            

@@ -8,7 +8,7 @@
      <div class="">
          <!--image-->
          <div class="">
-            <img class="object-cover object-center rounded" alt="hero" src="/img/computerlogin.svg">
+            <img class="object-cover object-center rounded" alt="hero" src="/img/login.svg">
         </div>
         <!-- Email Address -->
     

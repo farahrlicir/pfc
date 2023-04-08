@@ -18,7 +18,7 @@
         
         <div class="flex flex-col  items-center">
           
-            <div class="mt-6 px-40 py-10 border-2 border-black dark:bg-gray-800 shadow-md overflow-hidden sm:rounded-lg">
+            <div class="  mt-6 px-40 py-10 mb-10 border-2 border-purple-900 shadow-md overflow-hidden sm:rounded-lg">
                 {{ $slot }}
             </div>
             
