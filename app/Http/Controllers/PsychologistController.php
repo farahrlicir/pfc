@@ -9,8 +9,8 @@ class PsychologistController extends Controller
 {
     public function index()
     {
-        $psychologists = Psychologist::orderBy('id','desc')->paginate(2);
-        return view('psychologist.index', compact('psychologists'));
+        $psychologists = Psychologist::orderBy('id','asc')->paginate(10);
+        return view('psychologists.index', compact('psychologists'));
     }
 
     /**
@@ -20,7 +20,7 @@ class PsychologistController extends Controller
     */
     public function create()
     {
-        return view('psychologist.create');
+        return view('psychologists.create');
     }
 
     /**
@@ -39,7 +39,7 @@ class PsychologistController extends Controller
         Psychologist::create($request->post());
 
         return redirect()->route('psychologists.index');
-        $request->session()->flash('status','has been created successfully.');
+        $request->session()->flash('status','Data has been created successfully.');
     }
 
     /**
@@ -50,7 +50,7 @@ class PsychologistController extends Controller
     */
     public function show(Psychologist $psychologist)
     {
-        return view('psychologist.show',compact('psychologist'));
+        return view('psychologists.show',compact('psychologist'));
     }
 
     /**
@@ -61,7 +61,7 @@ class PsychologistController extends Controller
     */
     public function edit(Psychologist $psychologist)
     {
-        return view('psychologist.edit',compact('psychologist'));
+        return view('psychologists.edit',compact('psychologist'));
     }
 
     /**
@@ -80,7 +80,7 @@ class PsychologistController extends Controller
         
         $psychologist->fill($request->post())->save();
 
-        return redirect()->route('psychologist.index')->with('success',' Has Been updated successfully');
+        return redirect()->route('psychologists.index')->with('success','Data Has Been updated successfully');
     }
 
     /**
@@ -92,7 +92,7 @@ class PsychologistController extends Controller
     public function destroy(Psychologist $psychologist)
     {
         $psychologist->delete();
-        return redirect()->route('psychologists.index')->with('success',' has been deleted successfully');
+        return redirect()->route('psychologists.index')->with('success','Data has been deleted successfully');
     }
 }
 

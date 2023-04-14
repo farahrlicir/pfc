@@ -9,7 +9,7 @@ class ClassroomController extends Controller
 {
     public function index()
     {
-        $classrooms = Classroom::orderBy('id','asc')->paginate(10);
+        $classrooms = Classroom::orderBy('id','asc')->paginate(8);
         return view('classrooms.index', compact('classrooms'));
     }
 

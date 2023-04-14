@@ -17,7 +17,7 @@
     <!--ENDHEAD-->
 
        <main>
-        @yield('main')
+         @yield('main')
        </main>
         
        

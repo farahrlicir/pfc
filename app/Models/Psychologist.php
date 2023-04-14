@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Psychologist extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'phonenumber'];
+    protected $fillable = ['name', 'phonenumber','workdate'];
 }

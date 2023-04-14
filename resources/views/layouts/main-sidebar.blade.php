@@ -10,18 +10,20 @@
       <li>
           <a href="#"><img src="{{asset('img/student-sidebar.svg')}}" class="icon">Students<i class="bx bxs-chevron-right icon-right"></i></a>
           <ul class="side-dropdown">
-             <li><a href="#">Add Student</a></li>
-             <li><a href="#">Alert</a></li>
-             <li><a href="#">Alert</a></li>
-             <li><a href="#">Alert</a></li>
+             <li><a href="{{route('students.create')}}">Add Student</a></li>
+             <li><a href="{{route('students.index')}}">Student's List</a></li>
            </ul>
        </li>
+       <li>
+        <a href="#"><img src="{{asset('img/parent-sidebar.svg')}}" class="icon">Parents<i class="bx bxs-chevron-right icon-right"></i></a>
+        <ul class="side-dropdown">
+           <li><a href="{{route('parents.index')}}">Parent's List</a></li>
+         </ul>
+     </li>
        <li>
          <a href="#"><img src="{{asset('img/user-sidebar.svg')}}" alt="" class="icon">Users<i class="bx bxs-chevron-right icon-right"></i></a>
          <ul class="side-dropdown">
            <li><a href="#">Add User</a></li>
-           <li><a href="#">Update User</a></li>
-           <li><a href="#">Delete User</a></li>
            <li><a href="#">User's List</a></li>
          </ul>
        </li>
@@ -31,7 +33,6 @@
         <a href="#"><img src="{{asset('img/director-sidebar.svg')}}" alt="" class="icon">Director<i class="bx bxs-chevron-right icon-right"></i></a>
         <ul class="side-dropdown">
           <li><a href="{{route('directors.create')}}">Add Director</a></li>
-          <li><a href="{{route('directors.index')}}">Update Director</a></li>
           <li><a href="#">Director's List</a></li>
         </ul>
       </li>
@@ -40,8 +41,6 @@
         <a href="#"><img src="{{asset('img/teacher-sidebar.svg')}}" alt="" class="icon"> Teachers<i class="bx bxs-chevron-right icon-right"></i></a>
         <ul class="side-dropdown">
           <li><a href="">Add Teacher</a></li>
-          <li><a href="#">Update Teacher</a></li>
-          <li><a href="#">Delete Teacher</a></li>
           <li><a href="#">Teacher's List</a></li>
         </ul>
       </li>
@@ -50,16 +49,27 @@
         <a href="#"><img src="{{asset('img/psychologist-sidebar.svg')}}" alt="" class="icon"> Psychologists<i class="bx bxs-chevron-right icon-right"></i></a>
         <ul class="side-dropdown">
           <li><a href="{{route('psychologists.create')}}">Add Psychologist</a></li>
-          <li><a href="#">Update Psychologist</a></li>
-          <li><a href="#">Delete Psychologist</a></li>
           <li><a href="{{route('psychologists.index')}}">Psychologist's List</a></li>
         </ul>
       </li>
      
        <li class="divider">--School components--</li>
-       <li><a href="{{route('classrooms.create')}}"><img src="{{asset('img/classroom-sidebar.svg')}}" alt="" class="icon"> Classrooms</a></li>
-       <li><a href="#"><img src="{{asset('img/library-sidebar.svg')}}" alt="" class="icon"> Library</a></li>
+       <li>
+        <a href="#"><img src="{{asset('img/classroom-sidebar.svg')}}" alt="" class="icon"> Classrooms<i class="bx bxs-chevron-right icon-right"></i></a>
+        <ul class="side-dropdown">
+          <li><a href="{{route('classrooms.create')}}">Add Class</a></li>
+          <li><a href="{{route('classrooms.index')}}">class's List</a></li>
+        </ul>
+      </li>
+       <li>
+        <a href="#"><img src="{{asset('img/library-sidebar.svg')}}" alt="" class="icon"> Library<i class="bx bxs-chevron-right icon-right"></i></a>
+        <ul class="side-dropdown">
+          <li><a href="{{route('libraries.create')}}">Add Book</a></li>
+          <li><a href="{{route('libraries.index')}}">Book's List</a></li>
+        </ul>
+      </li>
        <li><a href="#"><img src="{{asset('img/dormitory-sidebar.svg')}}" alt="" class="icon"> Dormitories</a></li>
+       <li><a href="{{route('classrooms.create')}}"><img src="{{asset('img/book-sidebar.svg')}}" alt="" class="icon">Subjects</a></li>
        <li>
        
       <li class="divider">_____________________</li>

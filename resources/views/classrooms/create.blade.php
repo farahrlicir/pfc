@@ -20,11 +20,16 @@ Classroom-Add
          <div>
             <label for="Name" class="block mb-2 text-sm font-medium text-black ">Select a Classroom</label>
             <select id="Name" name="Name" class="border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" value="{{old('Name')}}">
-            <option  value="one" value="{{old('Name') == "one" ? 'selected' : ''}}">one</option>
-            <option value="two" value="{{old('Name') == "two" ? 'selected' : ''}}">two</option>
-            <option value="three" value="{{old('Name') == "three" ? 'selected' : ''}}">three</option>
-            <option value="four" value="{{old('Name') == "four" ? 'selected' : ''}}">four</option>
-            <option value="five" value="{{old('Name') == "five" ? 'selected' : ''}}">five</option>
+            <option  value="A1" value="{{old('Name') == "A1" ? 'selected' : ''}}">A1</option>
+            <option value="A2" value="{{old('Name') == "A2" ? 'selected' : ''}}">A2</option>
+            <option value="B1" value="{{old('Name') == "B1" ? 'selected' : ''}}">B1</option>
+            <option value="B2" value="{{old('Name') == "B2" ? 'selected' : ''}}">B2</option>
+            <option value="C1" value="{{old('Name') == "C1" ? 'selected' : ''}}">C1</option>
+            <option value="C2" value="{{old('Name') == "C2" ? 'selected' : ''}}">C2</option>
+            <option value="D1" value="{{old('Name') == "D1" ? 'selected' : ''}}">D1</option>
+            <option value="D2" value="{{old('Name') == "D2" ? 'selected' : ''}}">D2</option>
+            <option value="E1" value="{{old('Name') == "E1" ? 'selected' : ''}}">E1</option>
+            <option value="E2" value="{{old('Name') == "E2" ? 'selected' : ''}}">E2</option>
             </select>
             </div>
           <div>

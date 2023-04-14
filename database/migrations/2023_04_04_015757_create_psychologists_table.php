@@ -15,8 +15,9 @@ return new class extends Migration
     {
         Schema::create('psychologists', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('phonenumber');
+            $table->string('name')->required();
+            $table->string('phonenumber')->required();
+            $table->date('workdate')->required();
             $table->timestamps();
         });
     }

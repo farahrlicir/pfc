@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->binary('photo')->nullable();
+            $table->String('photo')->nullable();
             $table->String('FirstName')->required();
             $table->String('LastName')->required();
             $table->String('Gender')->required();
@@ -27,6 +27,17 @@ return new class extends Migration
             $table->String('disease')->required();
             $table->String('level')->required();
             $table->String('class')->required();
+            //Parents
+            $table->String('MotherName')->required();
+            $table->String('MotherProfession')->required();
+            $table->String('PhoneNumberM')->required();
+            $table->String('FullAddressM')->required();
+            $table->String('FatherName')->required();
+            $table->String('FatherProfession')->required();
+            $table->String('PhoneNumberF')->required();
+            $table->String('FullAddressF')->required();
+            $table->String('FamilySituation')->required();
+            $table->String('Remarque');
             $table->timestamps();
         });
     }

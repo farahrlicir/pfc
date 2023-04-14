@@ -33,7 +33,6 @@ class LibraryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'BookId'=> 'required',
             'BookTitle'=> 'required',
             'Author'=> 'required',
             'Edition'=> 'required',
@@ -54,7 +53,7 @@ class LibraryController extends Controller
     */
     public function show(Library $library)
     {
-        return view('librariess.show',compact('library'));
+        return view('libraries.show',compact('library'));
     }
 
     /**
@@ -78,7 +77,6 @@ class LibraryController extends Controller
     public function update(Request $request, Library $library)
     {
         $request->validate([
-            'BookId'=> 'required',
             'BookTitle'=> 'required',
             'Author'=> 'required',
             'Edition'=> 'required',

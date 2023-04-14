@@ -8,20 +8,32 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     use HasFactory;
-
-     protected $fillable=[
-    'id',
-    'photo',
-    'FirstName',
-    'LastName',
-    'Gender',
-    'Dateofbirth',
-    'placeofbirth',
-    'adresse',
-    'nationality',
-    'bloodgroup',
-    'disease',
-    'level',
-    'class',
-    ];
+    protected $fillable=[
+        'photo',
+        'FirstName',
+        'LastName',
+        'Gender',
+        'Dateofbirth',
+        'placeofbirth',
+        'adresse',
+        'nationality',
+        'disease',
+        'bloodgroup',
+        'level',
+        'class',
+        'MotherName',
+        'MotherProfession',
+        'PhoneNumberM',
+        'FullAddressM',
+        'FatherName',
+        'FatherProfession',
+        'PhoneNumberF',
+        'FullAddressF',
+        'FamilySituation',
+        'Remarque'
+        ];
+        public function Classroom()
+    {
+        return $this->hasOne(Classroom::class);
+    }    
 }
