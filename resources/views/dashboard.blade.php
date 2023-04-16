@@ -44,7 +44,7 @@
           <div class="profile">
             <img src="/img/admin2.jpg" class="">
             <ul class="profile-link">
-              <li><a href="{{route('profile.edit')}}"><i class="bx bxs-user-circle  icon"></i>Profile</a></li>
+              <li><a href="{{route('profile.edit')}}"><i class="bx bxs-user-circle sm:w-5 sm:h-5 sm:rounded-full icon"></i>Profile</a></li>
               <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <li><a href="{{('logout')}}" onclick="event.preventDefault();this.closest('form').submit();">
@@ -86,24 +86,35 @@
              <div class="bg-purple-300 border-white border-4 py-6 ">
                    <h2 class="font-bold">{{$students}}</h2>
                    <p>Total Student</p>
-                   <!--svg-->
-   
              </div>          
              <div class="bg-gray-200 border-white border-2 py-6">
-                     <h2 class="font-bold">15</h2>
+                     <h2 class="font-bold">{{$teachers}}</h2>
                      <p>Total Teacher</p>
-                     <!--svg-->
-            </div>
-            <div class="bg-pink-100 border-white border-2 py-6">
+             </div>
+             <div class="bg-pink-100 border-white border-2 py-6">
                       <h2 class="font-bold">{{$classrooms}}</h2>
                       <p>Total Classroom</p>
-                     <!--svg-->
-            </div>
-             <div class="bg-amber-100 border-white border-2 py-6">
-                   <h2 class="font-bold"> {{$libraries}}</h2>
-                   <p>Total Book</p>
-                   <!-- svg h-w 64px -->
-             </div>
+              </div>
+              <div class="bg-amber-100 border-white border-2 py-6">
+                    <h2 class="font-bold"> {{$libraries}}</h2>
+                    <p>Total Book</p>
+               </div>
+               <div class="bg-gray-200 border-white border-2 py-6">
+                 <h2 class="font-bold">{{$students}}</h2>
+                 <p>Total Parent</p>
+               </div>
+               <div class="bg-purple-300 border-white border-4 py-6 ">
+                  <h2 class="font-bold">{{$psychologists}}</h2>
+                  <p>Total Psychologist</p>
+                </div>         
+                <div class="bg-amber-100 border-white border-2 py-6">
+                   <h2 class="font-bold"> {{$subjects}}</h2>
+                   <p>Total Subject</p>
+                 </div> 
+                 <div class="bg-pink-100 border-white border-2 py-6">
+                    <h2 class="font-bold">{{$directors}}</h2>
+                    <p>Total Directors</p>
+                  </div>
          </section>
       </main>
      <!--ENDMAIN--> 

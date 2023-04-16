@@ -12,21 +12,21 @@
     <title>EDUKIDS</title>
     @vite('resources/css/app.css','resources/js/app.js',)
 </head>
-<body class="bg-purple-300 overflow-hidden">
+<body class="bg-purple-100 overflow-hidden">
     <div class="mt-20">
-       <h2 class="md:text-4xl pb-6 font-bold font-delicious flex justify-center sm:text-sm ">WELCOME AT EDUKIDS</h2>
+       <h2 class="xl:text-4xl sm:text-xl sm: sm:font-bold pb-6 font-bold font-delicious flex justify-center  ">WELCOME AT EDUKIDS</h2>
    </div>
    <div class="md:grid md:grid-cols-2 md:gap-4 md:my-44 sm:grid sm:grid-rows-2">
      <div class="grid grid-rows-2 gap-4 justify-center">
         <img src="/img/gif3.gif" class="w-40 h-40 border-y-2 border-x-2 border-purple-900 border-double">
        <h2>
-        <a href="{{route('dashboard')}}" class="font-bold text-1xl">ADMINISTRATOR</a>
+        <a href="{{route('dashboard')}}" class="font-bold text-xl sm:text-sm sm:ml-6">ADMINISTRATOR</a>
        </h2>
      </div>
      <div class="grid grid-rows-2 gap-4 justify-center">
         <img src="/img/gif.gif"  class="w-40 h-40 border-y-2 border-x-2 border-purple-900 border-double">
        <h2>
-        <a href="welcome" class="font-bold text-1xl ml-9 ">VISITOR</a>
+        <a href="welcome" class="font-bold text-xl ml-9 sm:text-sm ">VISITOR</a>
        </h2>
      </div>
    </div>

@@ -1,7 +1,7 @@
 @extends('master')
 
 @section('title')
-Student-list
+Student-info
 @stop
 
 @section('main')
@@ -13,7 +13,7 @@ Student-list
      <!--Student's INFO-->
      <div class="grid grid-cols-2 gap-2">
         <div class="border-bluey border-y-2 border-x-2">
-        <h2 class="font-extrabold  bg-slate-100 px-6 py-2">Situation civique</h2><br><br>
+        <h2 class="font-extrabold  bg-slate-100 px-6 py-2">civique Situation</h2><br><br>
         <span><p class="font-bold text-lg px-6">Id :<span class="font-light">{{ $student->id }}</span></p></span><br>
         <span><p class="font-bold text-lg px-6">First Name :<span class="font-light">{{ $student->FirstName}}</span></p></span><br>
         <span><p class="font-bold text-lg px-6">Family Name:<span class="font-light">{{ $student->LastName}}</span></p></span><br>

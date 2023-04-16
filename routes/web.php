@@ -8,6 +8,9 @@ use App\Http\Controllers\LibraryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\DashboardController;
@@ -81,7 +84,15 @@ Route::resource('classrooms', ClassroomController::class)->middleware('auth');
 
 Route::resource('libraries', LibraryController::class)->middleware('auth');
 Route::resource('students', StudentController::class)->middleware('auth');
-Route::resource('parents', ParentController::class);
+Route::resource('parents', ParentController::class)->middleware('auth');
+Route::resource('teachers', TeacherController::class)->middleware('auth');
+
+Route::resource('subjects', SubjectController::class)->middleware('auth');
+
+
+Route::get('/getevent', [CalendarController::class, 'getevent'])->name('fullcalendar');
+Route::post('/createevent',[CalendarController::class,'createEvent'])->name('createevent');
+Route::post('/deleteevent',[CalendarController::class,'deleteEvent'])->name('deleteevent');
 
 Route::resource('products', ProductController::class);
 

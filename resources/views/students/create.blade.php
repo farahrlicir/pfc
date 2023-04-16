@@ -16,7 +16,7 @@ Student-Add
         <strong>Whoops!</strong>There were some problems with your input.<br><br>
         <ul>
             @foreach ($errors->all() as $error)
-                <li class="text-red-600">{{ $error }}</li>
+                <li class="text-red-800 font-bold">{{ $error }}</li>
             @endforeach
         </ul>
     </div>

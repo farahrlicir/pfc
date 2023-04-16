@@ -109,7 +109,7 @@ Student-Add
                <input type="text" name="PhoneNumberM" id="PhoneNumberM" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ... " value="{{ $student->PhoneNumberM }}" >
               </div>
               <div>
-               <label for="FullAddressM" class="block mb-2 text-sm font-medium text-black">Mother's Address:</label> value="{{ $student->MotherName }}"
+               <label for="FullAddressM" class="block mb-2 text-sm font-medium text-black">Mother's Address:</label>
                <input type="text" name="FullAddressM" id="FullAddressM" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ... " value="{{ $student->FullAddressM }}" >
               </div>
               <div>

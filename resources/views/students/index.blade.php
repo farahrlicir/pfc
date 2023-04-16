@@ -8,12 +8,13 @@ Student-list
 
 <div class="">
 <h2 class="text-center font-extrabold ">***Students List***</h2><br><br>
+
     <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><a class="btn btn-success" href="{{ route('students.create') }}"> Create</a></button>
     <br><br>
 
     @if ($message = Session::get('success'))
     <div class="alert alert-success">
-        <p class=" text-green-600">{{ $message }}</p>
+        <p class=" text-green-600 font-bold">{{ $message }}</p>
     </div>
    @endif
  

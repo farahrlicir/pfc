@@ -42,7 +42,7 @@ class SchoolController extends Controller
         
         School::create($request->post());
 
-        return redirect()->route('schools.index')->with('success','school has been created successfully.');
+        return redirect()->route('schools.index')->with('success','Data has been created successfully.');
     }
 
     /**
@@ -87,7 +87,7 @@ class SchoolController extends Controller
         
         $school->fill($request->post())->save();
 
-        return redirect()->route('schools.index')->with('success','school Has Been updated successfully');
+        return redirect()->route('schools.index')->with('success','Data Has Been updated successfully');
     }
 
     /**
@@ -99,6 +99,6 @@ class SchoolController extends Controller
     public function destroy(School $school)
     {
         $school->delete();
-        return redirect()->route('schools.index')->with('success','school has been deleted successfully');
+        return redirect()->route('schools.index')->with('success','Data has been deleted successfully');
     }
 }

@@ -7,24 +7,36 @@
 
 @section('main')
 
-<div class="bg-white">
+<div class="">
  <div class="flex justify-center px-5 py-5">
     <div class="border-bluey border-y-2 border-x-2">
-         <h2 class="font-extrabold  bg-slate-100 px-6 py-2"> ***Director's Info***</h2><br><br>
+        
+
+         @if ($message = Session::get('success'))
+           <div class="alert alert-success">
+            <p class=" text-green-600">{{ $message }}</p>
+           </div>
+         @endif
+
         @foreach ($directors as $director)
-          <span><p class="font-bold text-lg px-6">Director's FullName :<span class="font-light">{{ $director->fullname}}</span></p></span><br>
-          <span><p class="font-bold text-lg px-6">Phone Number :<span class="font-light">{{ $director->phonenum}}</span></p></span><br>
-          <span><p class="font-bold text-lg px-6">Email :<span class="font-light">{{ $director->email }}</span></p></span><br>
-          <span><p class="font-bold text-lg px-6">Address :<span class="font-light">{{ $director->address }}</span></p></span><br>
-          <span><p class="font-bold   ">
-            <form action="{{ route('directors.destroy',$director->id) }}" method="Post" class="space-x-10 px-6">
-                <button class="bg-slate-700 text-white p-2 rounded-lg font-semibold" ><a href="{{ route('directors.edit',$director->id) }}">Edit</a></button>
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="bg-red-800 text-white p-2  rounded-lg font-semibold">Delete</button>
-                <button class="bg-slate-200  p-2 rounded-lg"><a href="{{ route('directors.create') }}"> Back</a><button>
-            </form>
-            </p>
+           <div class="flex w-full bg-blue-100 justify-center items-center">
+             <img src="/img/director.svg" alt="" >
+            </div><br><br><br>
+            <div class="flex justify-center align-middle ">
+               <span><p class="font-bold text-lg px-6">FullName:<br><span class="font-light">{{ $director->fullname}}</span></p></span><br>
+               <span><p class="font-bold text-lg px-6">Num:<br> <span class="font-light">{{ $director->phonenum}}</span></p></span><br>
+               <span><p class="font-bold text-lg px-6">Email:<br><span class="font-light">{{ $director->email }}</span></p></span><br>
+               <span><p class="font-bold text-lg px-6">Address: <br><span class="font-light">{{ $director->address }}</span></p></span><br>
+            </div> <br><br><br>
+              
+               <form action="{{ route('directors.destroy',$director->id) }}" method="Post" class="flex justify-between px-3 py-3">
+                 <a href="{{ route('directors.edit',$director->id) }}"  class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Edit</a>
+                  @csrf
+                  @method('DELETE')
+                  <button type="submit" class="bg-red-800 text-white p-2  rounded-lg font-semibold">Delete</button>
+               
+                </form>
+         
 
         @endforeach
     </div>

@@ -15,6 +15,21 @@ return new class extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
+            $table->String('Tphoto')->nullable();
+            $table->String('TFirstName')->required();
+            $table->String('TLastName')->required();
+            $table->String('TGender')->required();
+            $table->date('TDateofbirth')->required();
+            $table->String('Tplaceofbirth')->required();
+            $table->String('Tadresse')->required();
+            $table->String('Tnationality')->required();
+            $table->String('Tbloodgroup')->required();
+            $table->String('Tphonenumber')->required();
+            $table->String('Tdisease')->required();
+            $table->String('Tlevel')->required();
+            $table->String('Tclass')->required();
+            $table->date('Tdatework')->required();
+            $table->String('Sname')->required();
             $table->timestamps();
         });
     }

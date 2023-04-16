@@ -38,7 +38,7 @@ class ClassroomController extends Controller
         
         Classroom::create($request->post());
 
-        return redirect()->route('classrooms.index')->with('success','has been created successfully.');
+        return redirect()->route('classrooms.index')->with('success','Data has been created successfully.');
     }
 
     /**
@@ -79,7 +79,7 @@ class ClassroomController extends Controller
         
         $classroom->fill($request->post())->save();
 
-        return redirect()->route('classrooms.index')->with('success',' Has Been updated successfully');
+        return redirect()->route('classrooms.index')->with('success','Data Has Been updated successfully');
     }
 
     /**
@@ -91,6 +91,6 @@ class ClassroomController extends Controller
     public function destroy(Classroom $classroom)
     {
         $classroom->delete();
-        return redirect()->route('classrooms.index')->with('success',' has been deleted successfully');
+        return redirect()->route('classrooms.index')->with('success','Data has been deleted successfully');
     }
 }

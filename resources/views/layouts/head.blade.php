@@ -5,7 +5,6 @@
    <!--<link href="img/favicon.png" rel="icon">-->
    <link rel="stylesheet" href="{{asset('css/dashbboard.css')}}">
    <link href="{{asset('img/favicon.png')}}" rel="icon">
-
    <script src="https://kit.fontawesome.com/034dfe95c2.js" crossorigin="anonymous"></script>
    <title>@yield('title')</title>
    @vite('resources/css/app.css','resources/js/app.js',)

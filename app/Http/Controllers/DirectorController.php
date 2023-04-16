@@ -46,13 +46,13 @@ class DirectorController extends Controller
             
             Director::create($request->post());
     
-            return redirect()->route('directors.index')->with('success','Company has been created successfully.');
+            return redirect()->route('directors.index')->with('success','Data has been created successfully.');
         }
     
         /**
         * Display the specified resource.
         *
-        * @param  \App\director  $company
+        * @param  \App\director  $director
         * @return \Illuminate\Http\Response
         */
         public function show(Director $director)
@@ -63,7 +63,7 @@ class DirectorController extends Controller
         /**
         * Show the form for editing the specified resource.
         *
-        * @param  \App\Director  $company
+        * @param  \App\Director  $director
         * @return \Illuminate\Http\Response
         */
         public function edit(Director $director)
@@ -89,7 +89,7 @@ class DirectorController extends Controller
             
             $director->fill($request->post())->save();
     
-            return redirect()->route('directors.index')->with('success','Company Has Been updated successfully');
+            return redirect()->route('directors.index')->with('success','Data Has Been updated successfully');
         }
     
         /**
@@ -101,6 +101,6 @@ class DirectorController extends Controller
         public function destroy(Director $director)
         {
             $director->delete();
-            return redirect()->route('directors.index')->with('success','Company has been deleted successfully');
+            return redirect()->route('directors.index')->with('success','Data has been deleted successfully');
         }
 }

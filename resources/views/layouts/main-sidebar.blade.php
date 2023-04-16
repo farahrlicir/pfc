@@ -1,6 +1,6 @@
  <!--SIDEBAR-->
  <section id="sidebar">
-  <a href="#" class="brand"> 
+  <a href="{{url('/')}}" class="brand"> 
      <span><img src="{{asset('/img/logo-black.png')}}" class="w-9 h-9"></span>
      <span class="text-black">D</span><span class="text-bluey">U</span><span class="text-black">k</span> <span class="text-bluey">I</span> <span class="text-black">D</span><span class="text-black">S</span>
   </a>
@@ -21,10 +21,9 @@
          </ul>
      </li>
        <li>
-         <a href="#"><img src="{{asset('img/user-sidebar.svg')}}" alt="" class="icon">Users<i class="bx bxs-chevron-right icon-right"></i></a>
+         <a href="#"><img src="{{asset('img/calendar.svg')}}" alt="" class="icon">Calendar<i class="bx bxs-chevron-right icon-right"></i></a>
          <ul class="side-dropdown">
-           <li><a href="#">Add User</a></li>
-           <li><a href="#">User's List</a></li>
+           <li><a href="{{route('fullcalendar')}}">Add Event</a></li>
          </ul>
        </li>
        <!--STAFF-->
@@ -33,15 +32,15 @@
         <a href="#"><img src="{{asset('img/director-sidebar.svg')}}" alt="" class="icon">Director<i class="bx bxs-chevron-right icon-right"></i></a>
         <ul class="side-dropdown">
           <li><a href="{{route('directors.create')}}">Add Director</a></li>
-          <li><a href="#">Director's List</a></li>
+          <li><a href="{{route('directors.index')}}">Director's Info</a></li>
         </ul>
       </li>
 
       <li>
         <a href="#"><img src="{{asset('img/teacher-sidebar.svg')}}" alt="" class="icon"> Teachers<i class="bx bxs-chevron-right icon-right"></i></a>
         <ul class="side-dropdown">
-          <li><a href="">Add Teacher</a></li>
-          <li><a href="#">Teacher's List</a></li>
+          <li><a href="{{route('teachers.create')}}">Add Teacher</a></li>
+          <li><a href="{{route('teachers.index')}}">Teacher's List</a></li>
         </ul>
       </li>
 
@@ -68,8 +67,7 @@
           <li><a href="{{route('libraries.index')}}">Book's List</a></li>
         </ul>
       </li>
-       <li><a href="#"><img src="{{asset('img/dormitory-sidebar.svg')}}" alt="" class="icon"> Dormitories</a></li>
-       <li><a href="{{route('classrooms.create')}}"><img src="{{asset('img/book-sidebar.svg')}}" alt="" class="icon">Subjects</a></li>
+       <li><a href="{{route('subjects.index')}}"><img src="{{asset('img/book-sidebar.svg')}}" alt="" class="icon">Subjects</a></li>
        <li>
        
       <li class="divider">_____________________</li>
@@ -79,6 +77,7 @@
          <li><a href="{{route('schools.create')}}">Add info</a></li>
       
          <li><a href="{{route('schools.index')}}">School's info</a></li>
+
         </ul>
       </li>
       <!--<li><a href="#" class="active">Dashboard</a></li>-->

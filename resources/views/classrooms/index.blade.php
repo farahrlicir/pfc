@@ -36,7 +36,7 @@ Classrooms-list
         <td class="border bg-white py-4 px-6 border-gray-600">{{ $classroom->Capacity}}</td>
         <td class="border bg-white py-4 px-6 border-gray-600">
             <form action="{{ route('classrooms.destroy',$classroom->id) }}" method="Post" class="space-x-4">
-                <button class="bg-slate-700 text-white p-2 rounded-lg font-semibold" ><a href="{{ route('classrooms.edit',$classroom->id) }}">Edit</a></button>
+                <a href="{{ route('classrooms.edit',$classroom->id) }}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Edit</a>
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>

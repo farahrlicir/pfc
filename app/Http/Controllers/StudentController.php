@@ -71,7 +71,7 @@ class StudentController extends Controller
         Student::create($input);
      
         return redirect()->route('students.index')
-                        ->with('success','Student has been created successfully.');
+                        ->with('success','Data has been created successfully.');
     }
      
     /**
@@ -144,7 +144,7 @@ class StudentController extends Controller
         $student->update($input);
     
         return redirect()->route('students.index')
-                        ->with('success','Student has been  updated successfully');
+                        ->with('success','Data has been  updated successfully');
     }
   
     /**
@@ -158,7 +158,7 @@ class StudentController extends Controller
         $student->delete();
      
         return redirect()->route('students.index')
-                        ->with('success','Student has been  deleted successfully');
+                        ->with('success','Data has been  deleted successfully');
     }
 
 }

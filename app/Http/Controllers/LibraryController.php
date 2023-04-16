@@ -42,7 +42,7 @@ class LibraryController extends Controller
         
         Library::create($request->post());
 
-        return redirect()->route('libraries.index')->with('success','has been created successfully.');
+        return redirect()->route('libraries.index')->with('success','Data has been created successfully.');
     }
 
     /**
@@ -86,7 +86,7 @@ class LibraryController extends Controller
         
         $library->fill($request->post())->save();
 
-        return redirect()->route('libraries.index')->with('success',' Has Been updated successfully');
+        return redirect()->route('libraries.index')->with('success',' Data Has Been updated successfully');
     }
 
     /**
@@ -98,6 +98,6 @@ class LibraryController extends Controller
     public function destroy(Classroom $classroom)
     {
         $library->delete();
-        return redirect()->route('libraries.index')->with('success',' has been deleted successfully');
+        return redirect()->route('libraries.index')->with('success','Data has been deleted successfully');
     }
 }

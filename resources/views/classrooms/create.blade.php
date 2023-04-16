@@ -38,8 +38,8 @@ Classroom-Add
         </div>
     </div>
     <div class="flex space-x-4">
-     <button type="submit" class=" p-3 text-white bg-gray-900 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto  py-2.5 text-center">Save</button><br>
-     <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><a href="{{ route('classrooms.index') }}"> Back</a><button>
+      <button type="submit" class=" p-3 text-white bg-gray-900 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto  py-2.5 text-center">Save</button><br>
+      <a href="{{ route('classrooms.index') }}" class="bg-gray-200 border-black border-2 p-2 rounded-full "> Back</a>
     </div>
   </form>
  </div>
