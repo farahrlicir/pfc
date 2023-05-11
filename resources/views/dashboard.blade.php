@@ -28,18 +28,18 @@
       <!--NAVBAR-->
       <nav>
           <!--<p class="flex md:text-base sm:text-xs ">Primary School Edukids</p>-->
-           <form action="#">
-              <div class="form-group">
-              </div>
-           </form>
-           <a href="" class="nav-link">
-             <i class="bx bxs-bell"></i>
-             <span class="badge">5</span>
-           </a>
-           <a href="" class="nav-link">
-            <i class="bx bxs-message-square-dots"></i>
-            <span class="badge">3</span>
-          </a>
+         <form action="#">
+            <div class="form-group">
+            </div>
+         </form>
+         <!--<a href="" class="nav-link">
+
+           <i class="bx bxs-bell"></i>
+         </a>-->
+         <a href="" class="nav-link">
+          <!--<p class="text-sm font-bold">hello,{{      Auth::user()->name }}</p>-->
+          <!--<i class="bx bxs-message-square-dots"></i>-->
+        </a>
           <span class="divider"></span>
           <div class="profile">
             <img src="/img/admin2.jpg" class="">

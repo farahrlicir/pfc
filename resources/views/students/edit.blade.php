@@ -2,13 +2,13 @@
 
 
 @section('title')
-Student-Add
+Pupil-Add
 @stop
 
 @section('main')
  <div class="bg-white">
     <div>
-      <h2 class="text-center font-extrabold ">***Update Student's Info***</h2>
+      <h2 class="text-center font-extrabold ">***Edit Pupil's Info***</h2>
       <br><br><br><br>
    </div>
     

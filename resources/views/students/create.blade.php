@@ -2,13 +2,13 @@
 
 
 @section('title')
-Student-Add
+Pupil-Add
 @stop
 
 @section('main')
  <div class="bg-white">
     <div>
-      <h2 class="text-center font-extrabold ">***Add    Student***</h2>
+      <h2 class="text-center font-extrabold ">***Add   Pupil***</h2>
       <br><br><br><br>
    </div>
    @if ($errors->any())

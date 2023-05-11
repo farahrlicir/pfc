@@ -115,6 +115,7 @@ nav .toggle-sidebar{
 }
 nav .nav-link{
     position:relative;
+    color:black;
 }
 
 nav .nav-link .icon{
@@ -132,7 +133,7 @@ nav .nav-link .badge{
     display:flex;
     justify-content:center;
     align-item:center;
-    color:black;
+    color:white;
     font-size:12px;
 }
 nav .divider{

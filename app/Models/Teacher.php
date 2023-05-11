@@ -33,5 +33,5 @@ class Teacher extends Model
         {
             return $this->hasMany(Classroon::class);
         }    
-        
+       
 }

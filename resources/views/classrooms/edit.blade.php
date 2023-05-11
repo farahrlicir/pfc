@@ -38,7 +38,36 @@ Classroom-edit
           <div>
             <label for="Capacity" class="block mb-2 text-sm font-medium text-black ">Classroom's Capacity:</label>
             <input type="text" name="Capacity" id="Capacity" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ... " value="{{$classroom->Capacity}}">
-        </div>
+         </div>
+         <div>
+          <label for="Subject" class="block mb-2 text-sm font-medium text-black ">Select a Subject</label>
+          <select id="Subject" name="Subject" class="border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" value="{{old('Subject')}}">
+          <option  value="English" {{$classroom->Subject == "English" ? 'selected' : ''}}>English</option>
+          <option value="math" {{$classroom->Subject == "math" ? 'selected' : ''}}>math</option>
+          <option value="french" {{$classroom->Subject == "french" ? 'selected' : ''}}>french</option>
+          <option value="science" {{$classroom->Subject == "science" ? 'selected' : ''}}>science</option>
+          <option value="Art" {{$classroom->Subject == "Art" ? 'selected' : ''}}>Art</option>
+          <option value="islamic" {{$classroom->Subject == "islamic" ? 'selected' : ''}}>islamic</option>
+          <option value="music" {{$classroom->Subject == "music" ? 'selected' : ''}}>music</option>
+          <option value="history" {{$classroom->Subject == "history" ? 'selected' : ''}}>history</option>
+          <option value="geography" {{$classroom->Subject == "geography" ? 'selected' : ''}}>geography</option>
+          <option value="arabic" {{$classroom->Subject == "arabic" ? 'selected' : ''}}>arabic</option>
+          <option value="technology" {{$classroom->Subject == "technology" ? 'selected' : ''}}>technology</option>
+          <option value="graphic design" {{$classroom->Subject == "arabic" ? 'selected' : ''}}>graphic design</option>
+          </select>
+          </div>
+          <div>
+            <label for="begin" class="block mb-2 text-sm font-medium text-black ">Star-time:</label>
+            <input type="time" name="begin" id="begin" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ... " value="{{$classroom->begin}}">
+         </div>
+         <div>
+          <label for="end" class="block mb-2 text-sm font-medium text-black ">End-time:</label>
+          <input type="time" name="end" id="end" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ... " value="{{$classroom->end}}">
+       </div>
+       <div>
+        <label for="Teacher" class="block mb-2 text-sm font-medium text-black ">Teacher:</label>
+        <input type="text" name="Teacher" id="Teacher" class=" border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5" placeholder="type it ... " value="{{$classroom->Teacher}}">
+     </div>
     </div>
     <div class="flex space-x-4">
       <button type="submit" class=" p-3 text-white bg-gray-900 hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm w-full sm:w-auto  py-2.5 text-center">Save</button><br>

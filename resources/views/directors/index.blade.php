@@ -20,7 +20,7 @@
 
         @foreach ($directors as $director)
            <div class="flex w-full bg-blue-100 justify-center items-center">
-             <img src="/img/director.svg" alt="" >
+             <img src="/img/director.jpg" alt=""  class="rounded-full">
             </div><br><br><br>
             <div class="flex justify-center align-middle ">
                <span><p class="font-bold text-lg px-6">FullName:<br><span class="font-light">{{ $director->fullname}}</span></p></span><br>

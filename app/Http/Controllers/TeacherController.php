@@ -9,9 +9,9 @@ class TeacherController extends Controller
 {
     public function index()
     {
-        $teachers = Teacher::first()->paginate(10);
-        return view('teachers.index',compact('teachers'))
-            ->with('i', (request()->input('page', 1) - 1) * 10);
+        $teachers =Teacher::orderBy('id','asc')->paginate(12);
+        return view('teachers.index', compact('teachers'));
+            
     }
 
     /**
@@ -41,7 +41,7 @@ class TeacherController extends Controller
             'Tplaceofbirth',
             'Tadresse',
             'Tnationality',
-            'Tphonenumber'=>'max:10|unique:teachers',
+            'Tphonenumber'=>'unique:teachers',
             'Tdisease',
             'Tbloodgroup',
             'Tlevel',
@@ -51,7 +51,7 @@ class TeacherController extends Controller
         ]);
   
         $input = $request->all();
-  
+        
         if ($Tphoto = $request->file('Tphoto')) {
             $destinationPath = 'images/';
             $profileImage = date('YmdHis') . "." . $Tphoto->getClientOriginalExtension();

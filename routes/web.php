@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\GradeController;
 use App\Http\Controllers\ParentController;
 use App\Http\Controllers\SchoolController;
 use App\Http\Controllers\CompanyController;
@@ -10,11 +12,14 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\CalendarController;
 use App\Http\Controllers\DirectorController;
 use App\Http\Controllers\ClassroomController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PsychologistController;
+
+  
 
 
 
@@ -61,7 +66,7 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('schools', SchoolController::class)->middleware('auth');
 
-
+Route::get('/students/search', [StudentController::class, 'search'])->name('students.search');
 
  
 
@@ -86,15 +91,20 @@ Route::resource('libraries', LibraryController::class)->middleware('auth');
 Route::resource('students', StudentController::class)->middleware('auth');
 Route::resource('parents', ParentController::class)->middleware('auth');
 Route::resource('teachers', TeacherController::class)->middleware('auth');
-
 Route::resource('subjects', SubjectController::class)->middleware('auth');
 
 
-Route::get('/getevent', [CalendarController::class, 'getevent'])->name('fullcalendar');
-Route::post('/createevent',[CalendarController::class,'createEvent'])->name('createevent');
-Route::post('/deleteevent',[CalendarController::class,'deleteEvent'])->name('deleteevent');
+Route::get('/getevent', [CalendarController::class, 'getevent'])->name('fullcalendar')->middleware('auth');
+Route::post('/createevent',[CalendarController::class,'createEvent'])->name('createevent')->middleware('auth');
+Route::post('/deleteevent',[CalendarController::class,'deleteEvent'])->name('deleteevent')->middleware('auth');
 
 Route::resource('products', ProductController::class);
+
+Route::get('/welcome', [WelcomeController::class, 'index']);
+Route::post('/welcome', [WelcomeController::class, 'store'])->name('contact.us.store');
+
+Route::resource('grades',   GradeController::class)->middleware('auth');
+
 
 require __DIR__.'/auth.php';
             

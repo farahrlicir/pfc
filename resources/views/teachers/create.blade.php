@@ -61,7 +61,7 @@ Teacher-Add
              
                <div>
                  <label for="Tclass" class="block mb-2 text-sm font-medium text-black ">Select a Class:</label>
-                 <select id="Tclass" name="Tclass" class="border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5"  value="{{old('class')}}">
+                 <select id="Tclass"  name="Tclass" class="border border-black text-gray-900 text-sm rounded-full focus:ring-purple-900 focus:border-purple-900 block w-full p-2.5"  value="{{old('class')}}">
                   <option  value="A1" value="{{old('Name') == "A1" ? 'selected' : ''}}">A1</option>
                   <option value="A2" value="{{old('Name') == "A2" ? 'selected' : ''}}">A2</option>
                   <option value="B1" value="{{old('Name') == "B1" ? 'selected' : ''}}">B1</option>

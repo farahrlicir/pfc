@@ -32,8 +32,8 @@ class PsychologistController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'phonenumber' => 'required',
+            'name' => 'required|min:4',
+            'phonenumber' => 'required|numeric',
         ]);
         
         Psychologist::create($request->post());
@@ -74,8 +74,8 @@ class PsychologistController extends Controller
     public function update(Request $request, Psychologist $psychologist)
     {
         $request->validate([
-            'name' => 'required',
-            'phonenumber' => 'required',
+            'name' => 'required|min:4',
+            'phonenumber' => 'required|numeric',
         ]);
         
         $psychologist->fill($request->post())->save();

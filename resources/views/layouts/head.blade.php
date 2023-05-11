@@ -4,6 +4,8 @@
    <!--<link rel="stylesheet" href="css/dashbboard.css">-->
    <!--<link href="img/favicon.png" rel="icon">-->
    <link rel="stylesheet" href="{{asset('css/dashbboard.css')}}">
+   <!--HTML TO PDF-->
+   <script src= "https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
    <link href="{{asset('img/favicon.png')}}" rel="icon">
    <script src="https://kit.fontawesome.com/034dfe95c2.js" crossorigin="anonymous"></script>
    <title>@yield('title')</title>

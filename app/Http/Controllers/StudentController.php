@@ -15,6 +15,7 @@ class StudentController extends Controller
         return view('students.index',compact('students'))
             ->with('i', (request()->input('page', 1) - 1) * 10);
     }
+   
 
     /**
      * Show the form for creating a new resource.
@@ -25,13 +26,6 @@ class StudentController extends Controller
     {
         return view('students.create');
     }
-    
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -49,11 +43,11 @@ class StudentController extends Controller
             'class'=> 'required',
             'MotherName'=> 'required',
             'MotherProfession'=> 'required',
-            'PhoneNumberM'=> 'required',
+            'PhoneNumberM'=> 'required|numeric|max:10|unique',
             'FullAddressM'=> 'required',
             'FatherName'=> 'required',
             'FatherProfession'=> 'required',
-            'PhoneNumberF'=> 'required',
+            'PhoneNumberF'=> 'required|numeric|max:10|unique',
             'FullAddressF'=> 'required',
             'FamilySituation'=> 'required',
             'Remarque'
@@ -120,11 +114,11 @@ class StudentController extends Controller
             'class',
             'MotherName',
             'MotherProfession',
-            'PhoneNumberM',
+            'PhoneNumberM'=> 'numeric|max:10|unique',
             'FullAddressM',
             'FatherName',
             'FatherProfession',
-            'PhoneNumberF',
+            'PhoneNumberF'=> 'numeric|max:10|unique',
             'FullAddressF',
             'FamilySituation',
             'Remarque'
@@ -160,5 +154,9 @@ class StudentController extends Controller
         return redirect()->route('students.index')
                         ->with('success','Data has been  deleted successfully');
     }
+   
+
+ 
+
 
 }

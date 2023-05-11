@@ -1,15 +1,19 @@
 @extends('master')
 
 @section('title')
-Student-list
+Pupil-list
 @stop
 
 @section('main')
 
-<div class="">
-<h2 class="text-center font-extrabold ">***Students List***</h2><br><br>
-
-    <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><a class="btn btn-success" href="{{ route('students.create') }}"> Create</a></button>
+<div class="" >
+<h2 class="text-center font-extrabold ">***Pupils List (class:A1-D2)***</h2><br><br> 
+    <div class="flex justify-between  ">
+        <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><a class="btn btn-success" href="{{ route('students.create') }}"> Create</a></button>
+       <!-- <form type="get" action="{{url ('/students') }}" class="flex">-->
+         <!--<button type="submit" class=" border-black  border-2 p-2">ok</button>-->
+        <!--</form>-->
+    </div>
     <br><br>
 
     @if ($message = Session::get('success'))
@@ -18,7 +22,7 @@ Student-list
     </div>
    @endif
  
-<table class="w-full  whitespace-nowrap">
+<table class="w-full  whitespace-nowrap" >
 
 <thead>
    <tr class="text-left font-bold text-sm">
@@ -45,19 +49,17 @@ Student-list
             <form action="{{ route('students.destroy',$student->id) }}" method="Post" class="space-x-10">
                 <a href="{{ route('students.edit',$student->id) }}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Edit</a>
                 <a href="{{route('students.show',$student->id)}}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Show</a>
+                <a href="#" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Grade-Sheet</a>
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
+                <button type="submit" onclick="return confirm('Are you sure want delete?')" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
             </form>
-            
-
         </td>
-      
     </tr>
     @endforeach
 </tbody>
 </table>
 {!! $students->links() !!}
-  
+
 </div>
 @stop

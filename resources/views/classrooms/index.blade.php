@@ -11,11 +11,11 @@ Classrooms-list
     <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><a class="btn btn-success" href="{{ route('classrooms.create') }}"> Create</a></button>
     <br><br>
 
-@if ($message = Session::get('success'))
-<div class="alert alert-success">
-<p>{{ $message }}</p>
-</div>
-@endif
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success">
+        <p class=" text-green-600 font-bold">{{ $message }}</p>
+    </div>
+   @endif
 <div>
 <table class="w-full  whitespace-nowrap">
 
@@ -37,6 +37,7 @@ Classrooms-list
         <td class="border bg-white py-4 px-6 border-gray-600">
             <form action="{{ route('classrooms.destroy',$classroom->id) }}" method="Post" class="space-x-4">
                 <a href="{{ route('classrooms.edit',$classroom->id) }}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Edit</a>
+                <a href="{{route('classrooms.show',$classroom->id)}}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Time-table</a>
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>

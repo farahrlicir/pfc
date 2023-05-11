@@ -66,7 +66,7 @@ toggleS.addEventListener('click',function(){
 
 
 
-   //two
+   //Clock
    const showTime = () => {
     let date = new Date();
     console.log(date);
@@ -131,4 +131,41 @@ toggleS.addEventListener('click',function(){
     };
     
     showTime();
+
+    //PRINT
+    function printPageArea(areaID){
+        var printContent = document.getElementById(areaID).innerHTML;
+        var originalContent = document.body.innerHTML;
+        document.body.innerHTML = printContent;
+        window.print();
+        document.body.innerHTML = originalContent;
+    }
+   
+    //PDF
+    var button = document.getElementById("pdfButton");
+        button.addEventListener("click", function () {
+           var doc = new jsPDF("p", "mm", [300, 300]);
+           var makePDF = document.querySelector("#generatePdf");
+           // fromHTML Method
+           doc.fromHTML(makePDF);
+           doc.save("output.pdf");
+        });
+    //WORD
+    function exportHTML(){
+           var header = "<html xmlns:o='urn:schemas-microsoft-com:office:office' "+
+                "xmlns:w='urn:schemas-microsoft-com:office:word' "+
+                "xmlns='http://www.w3.org/TR/REC-html40'>"+
+                "<head><meta charset='utf-8'><title>Export HTML to Word Document with JavaScript</title></head><body>";
+           var footer = "</body></html>";
+           var sourceHTML = header+document.getElementById("source-html").innerHTML+footer;
+           
+           var source = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(sourceHTML);
+           var fileDownload = document.createElement("a");
+           document.body.appendChild(fileDownload);
+           fileDownload.href = source;
+           fileDownload.download = 'document.doc';
+           fileDownload.click();
+           document.body.removeChild(fileDownload);
+        }
+
 </script>

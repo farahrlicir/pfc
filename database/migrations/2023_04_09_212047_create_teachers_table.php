@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+        if(!Schema::hasTable('teachers')){
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
             $table->String('Tphoto')->nullable();
@@ -33,7 +34,13 @@ return new class extends Migration
             $table->timestamps();
         });
     }
-
+        Schema::table('teachers',function(Blueprint $table){
+        $table->foreignId('classrooms_id')->constrained;
+        });
+        Schema::table('teachers',function(Blueprint $table){
+        $table->foreignId('subjects_id')->constrained;
+       });
+   }
     /**
      * Reverse the migrations.
      *

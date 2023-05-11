@@ -20,7 +20,7 @@
      <div class="grid grid-rows-2 gap-4 justify-center">
         <img src="/img/gif3.gif" class="w-40 h-40 border-y-2 border-x-2 border-purple-900 border-double">
        <h2>
-        <a href="{{route('dashboard')}}" class="font-bold text-xl sm:text-sm sm:ml-6">ADMINISTRATOR</a>
+        <a href="{{route('dashboard')}}" class="font-bold text-xl sm:text-sm sm:ml-6">USER</a>
        </h2>
      </div>
      <div class="grid grid-rows-2 gap-4 justify-center">

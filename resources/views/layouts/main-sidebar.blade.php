@@ -8,10 +8,10 @@
       <li><a href="{{route('dashboard')}}" class="active"><img src="{{asset('img/home-sidebar.svg')}}" alt="" class="icon"> Dashboard</a></li>
       <li class="divider">---Main---</li>
       <li>
-          <a href="#"><img src="{{asset('img/student-sidebar.svg')}}" class="icon">Students<i class="bx bxs-chevron-right icon-right"></i></a>
+          <a href="#"><img src="{{asset('img/student-sidebar.svg')}}" class="icon">Pupils<i class="bx bxs-chevron-right icon-right"></i></a>
           <ul class="side-dropdown">
-             <li><a href="{{route('students.create')}}">Add Student</a></li>
-             <li><a href="{{route('students.index')}}">Student's List</a></li>
+             <li><a href="{{route('students.create')}}">Add Pupil</a></li>
+             <li><a href="{{route('students.index')}}">Pupil's List</a></li>
            </ul>
        </li>
        <li>
@@ -26,6 +26,13 @@
            <li><a href="{{route('fullcalendar')}}">Add Event</a></li>
          </ul>
        </li>
+       <li>
+        <a href="#"><img src="{{asset('img/grade-sidebar.svg')}}" alt="" class="icon">Grade-Sheet<i class="bx bxs-chevron-right icon-right"></i></a>
+        <ul class="side-dropdown">
+          <li><a href="#">View-grades</a></li>
+        </ul>
+      </li>
+      
        <!--STAFF-->
        <li class="divider">---Staff's List---</li>           
        <li>

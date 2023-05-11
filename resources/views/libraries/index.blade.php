@@ -10,8 +10,9 @@ Book List
     <h2 class="text-center font-extrabold ">***Books List***</h2><br><br>
         <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><a class="btn btn-success" href="{{ route('libraries.create') }}"> Create</a></button>
         <br><br>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
     <div>
-    <table class="w-full  whitespace-nowrap">
+    <table class="w-full  whitespace-nowrap" id="myTable">
     
     <thead>
        <tr class="text-left font-bold text-sm">
@@ -48,6 +49,6 @@ Book List
     </tbody>
     </table>
     {!! $libraries->links() !!}
-      
+  
     </div>
 @stop

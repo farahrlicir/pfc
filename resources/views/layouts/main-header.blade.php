@@ -5,14 +5,14 @@
         <div class="form-group">
         </div>
      </form>
-     <a href="" class="nav-link">
+    <!-- <a href="" class="nav-link">
        <i class="bx bxs-bell"></i>
        <span class="badge">5</span>
      </a>
      <a href="" class="nav-link">
       <i class="bx bxs-message-square-dots"></i>
       <span class="badge">3</span>
-    </a>
+    </a>-->
     <span class="divider"></span>
     <div class="profile">
       <img src="/img/admin2.jpg" class="">

@@ -9,7 +9,7 @@ class ClassroomController extends Controller
 {
     public function index()
     {
-        $classrooms = Classroom::orderBy('id','asc')->paginate(8);
+        $classrooms = Classroom::orderBy('id','asc')->paginate(10);
         return view('classrooms.index', compact('classrooms'));
     }
 
@@ -34,6 +34,10 @@ class ClassroomController extends Controller
         $request->validate([
             'Name' => 'required',
             'Capacity' => 'required',
+            'Subject' => 'required',
+            'Teacher' => 'required',
+            'begin'=>'required',
+            'end'=>'required',
         ]);
         
         Classroom::create($request->post());
@@ -50,6 +54,7 @@ class ClassroomController extends Controller
     public function show(Classroom $classroom)
     {
         return view('classrooms.show',compact('classroom'));
+     
     }
 
     /**
@@ -75,6 +80,10 @@ class ClassroomController extends Controller
         $request->validate([
             'Name' => 'required',
             'Capacity' => 'required',
+            'Subject' => 'required',
+            'Teacher' => 'required',
+            'begin'=>'required',
+            'end'=>'required',
         ]);
         
         $classroom->fill($request->post())->save();

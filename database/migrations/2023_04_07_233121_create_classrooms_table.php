@@ -16,7 +16,11 @@ return new class extends Migration
         Schema::create('classrooms', function (Blueprint $table) {
             $table->id();
             $table->String('Name')->required();
+            $table->String('Subject')->required();
+            $table->String('Teacher')->required();
             $table->Integer('Capacity')->required();
+            $table->time('begin')->required();
+            $table->time('end')->required();
             $table->timestamps();
         });
     }

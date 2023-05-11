@@ -21,7 +21,7 @@ Parent-list
 
 <thead>
    <tr class="text-left font-bold text-sm">
-      <td class="border bg-white  py-4 px-6 border-gray-600">Std's Id</td>
+      <td class="border bg-white  py-4 px-6 border-gray-600">Pupil's Id</td>
       <td class="border bg-white py-4 px-6 border-gray-600">Mother's num</td>
       <td class="border bg-white py-4 px-6 border-gray-600">Father's num</td>
       <td class="border bg-white  py-4 px-6 border-gray-600">Father's Add</td>
