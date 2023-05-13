@@ -12,16 +12,16 @@ Teacher-Add
       <br><br><br><br>
    </div>
    @if ($errors->any())
-    <div class="alert alert-danger">
-        <strong>Whoops!</strong>There were some problems with your input.<br><br>
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li class="text-sm text-red-600 dark:text-red-400 space-y-1">{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-  @endif
-  
+   <div class="alert alert-danger">
+      <!-- <strong>Whoops!</strong>There were some problems with your input.<br><br>-->
+       <ul class=" px-2 bg-red-200 border-red-600  border-y-2 border-x-2 w-fit">
+           @foreach ($errors->all() as $error)
+               <li class="text-red-600 font-bold w-fit">{{ $error }}</li>
+           @endforeach
+       </ul>
+   </div>
+   <br><br><br>
+ @endif
    <form action="{{ route('teachers.store') }}" method="POST" enctype="multipart/form-data">
       @csrf
       <div class=" px-2 grid gap-6 mb-6 md:grid-cols-2">

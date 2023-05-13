@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Student;
 use App\Models\Grade;
 use Illuminate\Http\Request;
 
@@ -9,6 +8,7 @@ class GradeController extends Controller
 {
     public function index()
     {
+       
           $data =  Grade::all();
           //$student = Student::all();
        // $grades = Grade::orderBy('id','asc')->paginate(5);

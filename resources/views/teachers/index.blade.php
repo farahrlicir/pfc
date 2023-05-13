@@ -13,9 +13,10 @@ Teacher-list
 
     @if ($message = Session::get('success'))
     <div class="alert alert-success">
-        <p class=" text-green-600 font-bold">{{ $message }}</p>
+        <p class=" text-green-800 font-bold px-2 bg-green-200 border-green-600  border-y-2 border-x-2 w-fit">{{ $message }}</p>
     </div>
    @endif
+   <br><br>
  
 <table class="w-full  whitespace-nowrap">
 
@@ -46,7 +47,7 @@ Teacher-list
                 <a href="{{route('teachers.show',$teacher->id)}}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Show</a>
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
+                <button type="submit" onclick="return confirm('Are you sure?')" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
             </form>
             
 

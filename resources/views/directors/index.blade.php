@@ -8,15 +8,16 @@
 @section('main')
 
 <div class="">
+      
+  @if ($message = Session::get('success'))
+  <div class="alert alert-success">
+      <p class=" text-green-800 font-bold px-2 bg-green-200 border-green-600  border-y-2 border-x-2 w-fit">{{ $message }}</p>
+  </div>
+  @endif
+  <br><br>
  <div class="flex justify-center px-5 py-5">
     <div class="border-bluey border-y-2 border-x-2">
-        
-
-         @if ($message = Session::get('success'))
-           <div class="alert alert-success">
-            <p class=" text-green-600">{{ $message }}</p>
-           </div>
-         @endif
+    
 
         @foreach ($directors as $director)
            <div class="flex w-full bg-blue-100 justify-center items-center">
@@ -33,7 +34,7 @@
                  <a href="{{ route('directors.edit',$director->id) }}"  class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Edit</a>
                   @csrf
                   @method('DELETE')
-                  <button type="submit" class="bg-red-800 text-white p-2  rounded-lg font-semibold">Delete</button>
+                  <button onclick="return confirm('Are you sure?')" type="submit" class="bg-red-800 text-white p-2  rounded-lg font-semibold">Delete</button>
                
                 </form>
          

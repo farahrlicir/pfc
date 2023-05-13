@@ -13,9 +13,10 @@ Parent-list
 
     @if ($message = Session::get('success'))
     <div class="alert alert-success">
-        <p class=" text-green-600">{{ $message }}</p>
+        <p class=" text-green-800 font-bold px-2 bg-green-200 border-green-600  border-y-2 border-x-2 w-fit">{{ $message }}</p>
     </div>
    @endif
+   <br><br>
  
 <table class="w-full  whitespace-nowrap">
 
@@ -44,7 +45,7 @@ Parent-list
                 <a href="{{route('students.show',$student->id)}}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Show</a>
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
+                <button onclick="return confirm('Are you sure?')" type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
             </form>
             
 

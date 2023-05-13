@@ -29,10 +29,20 @@
        <li>
         <a href="#"><img src="{{asset('img/grade-sidebar.svg')}}" alt="" class="icon">Grade-Sheet<i class="bx bxs-chevron-right icon-right"></i></a>
         <ul class="side-dropdown">
-          <li><a href="#">View-grades</a></li>
+          <li><a href="{{route('grades.index')}}">View-grades</a></li>
         </ul>
-      </li>
-      
+       </li>
+       
+ 
+       <li>
+        <a href="#"><img src="{{asset('img/certificate-sidebar.svg')}}" alt="" class="icon">Certificates<i class="bx bxs-chevron-right icon-right"></i></a>
+        <ul class="side-dropdown">
+          <li><a href="{{url('/certificateA')}}">View-certificate</a></li>
+        </ul>
+       </li>
+       <li><a href="{{url('/absencesheet')}}" class="active"><img src="{{asset('img/absence-sidebar.svg')}}" alt="" class="icon">Absence-sheet</a></li>
+
+
        <!--STAFF-->
        <li class="divider">---Staff's List---</li>           
        <li>

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\ParentController;
 use App\Http\Controllers\SchoolController;
@@ -64,25 +63,26 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::resource('schools', SchoolController::class)->middleware('auth');
-
-Route::get('/students/search', [StudentController::class, 'search'])->name('students.search');
-
- 
-
-
-
+ Route::resource('schools', SchoolController::class)->middleware('auth');
  Route::resource('psychologists', PsychologistController::class)->middleware('auth');
 
-
-
-Route::get('/master',function(){
+ Route::get('/master',function(){
   return view('master');
 });
 
 Route::get('/new',function(){
   return view('new');
 });
+Route::get('/certificateA',function(){
+  return view('certificates.index');
+});
+Route::get('/certificateB',function(){
+  return view('certificates.indexB');
+});
+Route::get('/absencesheet',function(){
+  return view('absencesheet.index');
+});
+
 
 Route::resource('directors', DirectorController::class)->middleware('auth');
 Route::resource('classrooms', ClassroomController::class)->middleware('auth');
@@ -104,6 +104,11 @@ Route::get('/welcome', [WelcomeController::class, 'index']);
 Route::post('/welcome', [WelcomeController::class, 'store'])->name('contact.us.store');
 
 Route::resource('grades',   GradeController::class)->middleware('auth');
+
+
+
+
+
 
 
 require __DIR__.'/auth.php';

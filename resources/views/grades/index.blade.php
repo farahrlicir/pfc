@@ -6,48 +6,95 @@ Book List
 @stop
 
 @section('main')
-<div class="">
-    <h2 class="text-center font-extrabold ">***Books List***</h2><br><br>
-        <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><!--<a class="btn btn-success" href="{{ route('libraries.create') }}"> Create</a>--></button>
-        <br><br>
-    <div>
-    <table class="w-full  whitespace-nowrap" id="myTable">
-    
-    <thead>
-       <tr class="text-left font-bold text-sm">
-          <td class="border bg-white  py-4 px-6 border-gray-600">{{$student->id}}</td>
-          <td class="border bg-white py-4 px-6 border-gray-600"> BookTitle</td>
-          <td class="border bg-white py-4 px-6 border-gray-600">Author</td>
-          <td class="border bg-white  py-4 px-6 border-gray-600">Edition</td>
-          <td class="border bg-white py-4 px-6 border-gray-600">BookCopies</td>
-          <td class="border bg-white py-4 px-6 border-gray-600">BookSubject</td>
-          <td class="border bg-white py-4 px-6 border-gray-600">Action</td>
-       </tr>
-    </thead>
-    
-    <tbody>
-        {{$data}}
-    @foreach ($data as $dt)
+
+   <div class="bg-white" id="tbl_exporttable_to_xls">
+    <button class="bg-green-500 rounded-full px-5 text-white" onclick="ExportToExcel('xlsx')">Export table to excel</button>
+    <table cellspacing="3"class="border" style="white-space:nowrap; margin-top:2%; width:660px; border:1px solid black; height:100px; background-color:white;">
         <tr>
-            <td class="border bg-white py-4 px-6 border-gray-600">{{$dt['id']}}</td>
-            <td class="border bg-white py-4 px-6 border-gray-600">{{$student->id}}</td>
-            <td class="border bg-white py-4 px-6 border-gray-600"></td>
-            <td class="border bg-white py-4 px-6 border-gray-600"></td>
-            <td class="border bg-white py-4 px-6 border-gray-600"></td>
-            <td class="border bg-white py-4 px-6 border-gray-600"></td>
-            <td class="border bg-white py-4 px-6 border-gray-600">
-                <!--<form action="{{ route('libraries.destroy',$library->id) }}" method="Post" class="space-x-4">
-                    <button class="bg-slate-700 text-white p-2 rounded-lg font-semibold" ><a href="{{ route('libraries.edit',$library->id) }}">Edit</a></button>
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
-                </form>-->
-            </td>
-          
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Name:
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px;font-weight:bold;">Family-Name
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px;font-weight:bold;">Remarques
         </tr>
-        @endforeach
-    </tbody>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Subjects
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Marks
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Remarques
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Subjects
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Marks
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Remarques
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Subjects
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Marks
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Remarques
+        </tr>
     </table>
-   
-    </div>
+    <table cellspacing="3"class="border" style="white-space:nowrap; margin-top:2%; width:660px; border:1px solid black; height:300px; background-color:white;">
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Subjects
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Marks
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Remarques
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Arabic
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">English
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">French
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Math
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Techno
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Civic
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">History&Geo
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+        </tr>
+        <tr>
+            <td style="text-align:left;  border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Full-Mark
+            <td style="text-align:center;  border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+            <td style="text-align:center;  border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">
+        </tr>
+    </table>
+    <table cellspacing="3"class="border" style="white-space:nowrap; margin-top:2%; width:660px; border:1px solid black; height:105px; background-color:white;">
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Subjects
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Marks
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Remarques
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Subjects
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Marks
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Remarques
+        </tr>
+        <tr>
+            <td style="text-align:left; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Subjects
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Marks
+            <td style="text-align:center; border:1px solid black; padding-left:8px; padding-right:8px; font-size:11px; font-weight:bold;">Remarques
+        </tr>
+    </table>
+   </div>
+
 @stop

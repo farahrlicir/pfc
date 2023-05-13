@@ -7,11 +7,17 @@ Book List
 
 @section('main')
 <div class="">
-    <h2 class="text-center font-extrabold ">***Books List***</h2><br><br>
+        <h2 class="text-center font-extrabold ">***Books List***</h2><br><br>
         <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><a class="btn btn-success" href="{{ route('libraries.create') }}"> Create</a></button>
-        <br><br>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
     <div>
+    <br><br>
+        @if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p class=" text-green-800 font-bold px-2 bg-green-200 border-green-600  border-y-2 border-x-2 w-fit">{{ $message }}</p>
+        </div>
+       @endif
+       <br><br>
+     
     <table class="w-full  whitespace-nowrap" id="myTable">
     
     <thead>
@@ -40,7 +46,7 @@ Book List
                     <button class="bg-slate-700 text-white p-2 rounded-lg font-semibold" ><a href="{{ route('libraries.edit',$library->id) }}">Edit</a></button>
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
+                    <button onclick="return confirm('Are you sure?')" type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
                 </form>
             </td>
           

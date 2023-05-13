@@ -14,15 +14,16 @@ School-Add
   </div>
 
   @if ($errors->any())
-  <div class="alert alert-danger">
-      <strong>Whoops!</strong>There were some problems with your input.<br><br>
-      <ul>
-          @foreach ($errors->all() as $error)
-              <li class="text-red-600">{{ $error }}</li>
-          @endforeach
-      </ul>
-  </div>
-@endif
+    <div class="alert alert-danger">
+       <!-- <strong>Whoops!</strong>There were some problems with your input.<br><br>-->
+        <ul class=" px-2 bg-red-200 border-red-600  border-y-2 border-x-2 w-fit">
+            @foreach ($errors->all() as $error)
+                <li class="text-red-600 font-bold w-fit">{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    <br><br><br>
+  @endif
 
 <form action="{{ route('schools.store') }}" method="POST">
     @csrf

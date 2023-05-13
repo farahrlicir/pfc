@@ -11,11 +11,12 @@ Subject-list
     <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><a class="btn btn-success" href="{{ route('subjects.create') }}"> Create</a></button>
     <br><br>
 
-@if ($message = Session::get('success'))
-<div class="alert alert-success">
-<p class=" text-green-600 font-bold">{{ $message }}</p>
-</div>
-@endif
+    @if ($message = Session::get('success'))
+    <div class="alert alert-success">
+        <p class=" text-green-800 font-bold px-2 bg-green-200 border-green-600  border-y-2 border-x-2 w-fit">{{ $message }}</p>
+    </div>
+   @endif
+   <br><br>
 <div>
 <table class="w-full  whitespace-nowrap">
 
@@ -37,7 +38,7 @@ Subject-list
                 <a href="{{ route('subjects.edit',$subject->id) }}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Edit</a>
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
+                <button type="submit" onclick="return confirm('Are you sure?')" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
             </form>
         </td>
       

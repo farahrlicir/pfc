@@ -11,13 +11,13 @@
             </div>
         </div>
     </div>
-    
+    <br><br>
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
-            <p class=" text-green-600">{{ $message }}</p>
-        </div>
+     <div class="alert alert-success">
+         <p class=" text-green-800 font-bold px-2 bg-green-200 border-green-600  border-y-2 border-x-2 w-fit">{{ $message }}</p>
+     </div>
     @endif
-     
+    <br><br>
     <table class="table table-bordered">
         <tr>
             <th>No</th>

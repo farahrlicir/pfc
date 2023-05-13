@@ -10,12 +10,13 @@ Classrooms-list
 <h2 class="text-center font-extrabold ">***Classrooms List***</h2><br><br>
     <button class="bg-gray-200 border-black border-2 p-2 rounded-full "><a class="btn btn-success" href="{{ route('classrooms.create') }}"> Create</a></button>
     <br><br>
-
+ 
     @if ($message = Session::get('success'))
     <div class="alert alert-success">
-        <p class=" text-green-600 font-bold">{{ $message }}</p>
+        <p class=" text-green-800 font-bold px-2 bg-green-200 border-green-600  border-y-2 border-x-2 w-fit">{{ $message }}</p>
     </div>
-   @endif
+    @endif
+    <br><br>
 <div>
 <table class="w-full  whitespace-nowrap">
 
@@ -40,7 +41,7 @@ Classrooms-list
                 <a href="{{route('classrooms.show',$classroom->id)}}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Time-table</a>
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
+                <button onclick="return confirm('Are you sure?')" type="submit" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>
             </form>
         </td>
       
