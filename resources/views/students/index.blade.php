@@ -49,7 +49,6 @@ Pupil-list
             <form action="{{ route('students.destroy',$student->id) }}" method="Post" class="space-x-10">
                 <a href="{{ route('students.edit',$student->id) }}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Edit</a>
                 <a href="{{route('students.show',$student->id)}}" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Show</a>
-                <a href="#" class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Grade-Sheet</a>
                 @csrf
                 @method('DELETE')
                 <button type="submit" onclick="return confirm('Are you sure?')" class="bg-red-800 text-white p-2 rounded-lg font-semibold">Delete</button>

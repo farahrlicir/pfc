@@ -35,6 +35,10 @@ class Student extends Model
         ];
         public function Classroom()
     {
-        return $this->hasOne(Classroom::class);
+        return $this->belongto(Classroom::class);
     }    
+    public function grades()
+    {
+        return $this->hasOne(Grade::class);
+    }
 }

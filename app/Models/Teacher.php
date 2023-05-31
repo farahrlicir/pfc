@@ -28,10 +28,6 @@ class Teacher extends Model
         public function Subject()
         {
             return $this->hasOne(Subject::class);
-        }    
-        public function Classroom()
-        {
-            return $this->hasMany(Classroon::class);
-        }    
+        }       
        
 }

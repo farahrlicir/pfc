@@ -29,6 +29,7 @@
              <span><p class="font-bold text-lg ">Fax-Num <span class="font-light">{{ $school->faxnum }}</span></p></span><br>
              <span><p class="font-bold text-lg ">Web-Site <span class="font-light"><a href="http://127.0.0.1:8000/welcome">{{ $school->website }}</a></span></p></span><br>
              <span><p class="font-bold text-lg ">Email <span class="font-light">{{ $school->email }}</span></p></span><br>
+             <span></span>
         </div><br><br><br>
         <form action="{{ route('schools.destroy',$school->id) }}" method="Post" class="flex justify-between px-3">
             <a href="{{ route('schools.edit',$school->id) }}"  class="bg-slate-700 text-white p-2 rounded-lg font-semibold">Edit</a>

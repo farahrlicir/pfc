@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\School;
+use Illuminate\Http\Request;
 
 class SchoolController extends Controller
 {
@@ -101,4 +101,5 @@ class SchoolController extends Controller
         $school->delete();
         return redirect()->route('schools.index')->with('success','Data has been deleted successfully');
     }
+   
 }

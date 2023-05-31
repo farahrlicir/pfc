@@ -15,32 +15,26 @@ return new class extends Migration
     {
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
-            $table->string('FirstName');
-             $table->string('LastName');
-             $table->string('level');
-             $table->string('class');
+            $table->unsignedBigInteger('student_id');
             $table->integer('Arabicnote'); 
-             $table->string('RemarqueA');
+            $table->string('RemarqueA');
             $table->integer('Mathnote');
-             $table->string('RemarqueM');
+            $table->string('RemarqueM');
             $table->integer('Frenchnote'); 
-             $table->string('RemarqueF');
+            $table->string('RemarqueF');
             $table->integer('Islamicnote');
-             $table->string('RemarqueI');
+            $table->string('RemarqueI');
             $table->integer('Technonote');
-             $table->string('RemarqueT');
+            $table->string('RemarqueT');
             $table->integer('Civicnote');
-             $table->string('RemarqueC');
+            $table->string('RemarqueC');
             $table->integer('HistoryGeonote');
-             $table->string('RemarqueH');
+            $table->string('RemarqueH');
             $table->integer('Englishnote');
-             $table->string('RemarqueE');
+            $table->string('RemarqueE');
             $table->integer('Fullnote');
-             $table->string('RemarqueFull'); 
-             $table->string('Arabicteacher');
-             $table->string('Englishteacher'); 
-             $table->string('frenchteacher');
-             $table->date('date');
+            $table->string('RemarqueFull'); 
+            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
             $table->timestamps();
         });
     }

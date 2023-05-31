@@ -35,7 +35,7 @@ Teacher-list
 <tbody>
 @foreach ($teachers as $teacher)
     <tr>
-        <td class="border bg-white py-4 px-6 border-gray-600">{{ ++$i }}</td>
+        <td class="border bg-white py-4 px-6 border-gray-600">{{$teacher->id}}</td>
         <td class="border bg-white py-4 px-6 border-gray-600"><img src="/images/{{ $teacher->Tphoto }}" class="  w-14 h-14 rounded-full"></td>
         <td class="border bg-white py-4 px-6 border-gray-600">{{ $teacher->TFirstName}}</td>
         <td class="border bg-white py-4 px-6 border-gray-600">{{ $teacher->TLastName}}</td>

@@ -2,19 +2,20 @@
 
 namespace App\Http\Controllers;
 use App\Models\Grade;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class GradeController extends Controller
 {
     public function index()
     {
-       
-          $data =  Grade::all();
-          //$student = Student::all();
-       // $grades = Grade::orderBy('id','asc')->paginate(5);
-      // return view('grades.index', compact('grades'));
-      return view('grades.index',['data'=>$data]);
-      
+         //$data =  Grade::all();
+          $student = Student::all();
+          $grades = Grade::all();
+          return view('grades.index', compact('grades'));
+      // return view('grades.index',['data'=>$data]);
+   
+     
 	
     }
 
@@ -28,32 +29,24 @@ class GradeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'FirstName'=> 'required',
-            'LastName'=> 'required',
-            'level'=> 'required',
-            'class'=> 'required',
-            'Arabicnote'=>'required',
+            'Arabicnote',
             'RemarqueA',
-            'Mathnote'=>'required',
+            'Mathnote'=>'numeric|min:0|max:10',
             'RemarqueM',
-            'Frenchnote'=>'required',
+            'Frenchnote',
             'RemarqueF',
-            'Islamicnote'=>'required',
+            'Islamicnote',
             'RemarqueI',
-            'Technonote'=>'required',
+            'Technonote',
             'RemarqueT',
-            'Civicnote'=>'required',
+            'Civicnote',
             'RemarqueC',
-            'HistoryGeonote'=>'required',
+            'HistoryGeonote',
             'RemarqueH',
-            'Englishnote'=>'required',
+            'Englishnote',
             'RemarqueE',
-            'Fullnote'=>'required',
+            'Fullnote',
             'RemarqueFull',
-            'Arabicteacher'=>'required',
-            'Englishteacher'=>'required',
-            'frenchteacher'=>'required',
-            'date'=>'required|date',
         ]);
         
         Grade::create($request->post());
@@ -76,32 +69,24 @@ class GradeController extends Controller
     public function update(Request $request, Grade $grade)
     {
         $request->validate([
-            'FirstName'=> 'required',
-            'LastName'=> 'required',
-            'level'=> 'required',
-            'class'=> 'required',
-            'Arabicnote'=>'required',
+            'Arabicnote',
             'RemarqueA',
-            'Mathnote'=>'required',
+            'Mathnote',
             'RemarqueM',
-            'Frenchnote'=>'required',
+            'Frenchnote',
             'RemarqueF',
-            'Islamicnote'=>'required',
+            'Islamicnote',
             'RemarqueI',
-            'Technonote'=>'required',
+            'Technonote',
             'RemarqueT',
-            'Civicnote'=>'required',
+            'Civicnote',
             'RemarqueC',
-            'HistoryGeonote'=>'required',
+            'HistoryGeonote',
             'RemarqueH',
-            'Englishnote'=>'required',
+            'Englishnote',
             'RemarqueE',
-            'Fullnote'=>'required',
+            'Fullnote',
             'RemarqueFull',
-            'Arabicteacher'=>'required',
-            'Englishteacher'=>'required',
-            'frenchteacher'=>'required',
-            'date'=>'required|date',
         ]);
         
         $grade->fill($request->post())->save();
